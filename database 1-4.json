@@ -5,7 +5,7 @@
       "name": "Lekce 1",
       "pages": [
         {
-          "number": 1,
+          "number": 10,
           "words": [
             {
               "german": "der Abend",
@@ -161,6 +161,11 @@
               "czech": "my",
               "example": ""
             },
+          ]
+        },
+        {
+          "number": 11,
+          "words": [
             {
               "german": "in",
               "plural": "",
@@ -181,18 +186,13 @@
               "cz_gender": "f"
             },
             {
-              "german": "wg",
+              "german": "wo",
               "plural": "",
-              "czech": "zkratka pro \"wegen\" (kvůli)",
+              "czech": "kde",
               "example": ""
-            }
-          ]
-        },
-        {
-          "number": 2,
-          "words": [
+            },
             {
-              "german": "Wie wohnst du?",
+              "german": "Wo wohnst du?",
               "plural": "",
               "czech": "Kde bydlíš?",
               "example": ""
@@ -335,6 +335,11 @@
               "czech": "20",
               "example": ""
             },
+          ]
+        },
+        {
+          "number": 12,
+          "words": [
             {
               "german": "alt",
               "plural": "",
@@ -363,8 +368,14 @@
           ]
         },
         {
-          "number": 3,
+          "number": 13,
           "words": [
+            {
+              "german": "aber",
+              "plural": "",
+              "czech": "ale",
+              "example": ""
+            },
             {
               "german": "das Alter",
               "plural": "-",
@@ -553,12 +564,7 @@
               "plural": "",
               "czech": "Pochází z Vídně.",
               "example": ""
-            }
-          ]
-        },
-        {
-          "number": 4,
-          "words": [
+            },
             {
               "german": "das Konzert",
               "plural": "-e",
@@ -642,6 +648,11 @@
               "example": "",
               "cz_gender": "n"
             },
+          ]
+        },
+        {
+          "number": 14,
+          "words": [
             {
               "german": "falsch",
               "plural": "",
@@ -713,6 +724,11 @@
               "example": "",
               "cz_gender": "f"
             },
+          ]
+        },
+        {
+          "number": 15,
+          "words": [
             {
               "german": "bald",
               "plural": "",
@@ -730,12 +746,7 @@
               "plural": "",
               "czech": "do",
               "example": "Bis zum nächsten Mal!"
-            }
-          ]
-        },
-        {
-          "number": 5,
-          "words": [
+            },
             {
               "german": "Bis zum nächsten Mal!",
               "plural": "",
@@ -814,14 +825,6 @@
             }
           ]
         },
-        {
-          "number": 6,
-          "words": []
-        },
-        {
-          "number": 7,
-          "words": []
-        }
       ]
     },
     {
@@ -829,7 +832,7 @@
       "name": "Lekce 2",
       "pages": [
         {
-          "number": 8,
+          "number": 22,
           "words": [
             {
               "german": "arbeiten",
@@ -989,6 +992,11 @@
               "example": "",
               "cz_gender": "m"
             },
+          ]
+        },
+        {
+          "number": 23,
+          "words": [
             {
               "german": "besuchen",
               "plural": "",
@@ -1012,12 +1020,7 @@
               "plural": "",
               "czech": "trojnásobný",
               "example": ""
-            }
-          ]
-        },
-        {
-          "number": 9,
-          "words": [
+            },
             {
               "german": "gewinnen",
               "plural": "",
@@ -1123,6 +1126,11 @@
               "example": "",
               "cz_gender": "f"
             },
+          ]
+        },
+        {
+          "number": 24,
+          "words": [
             {
               "german": "das Amerika",
               "plural": "",
@@ -1198,12 +1206,7 @@
               "czech": "původ",
               "example": "",
               "cz_gender": "m"
-            }
-          ]
-        },
-        {
-          "number": 10,
-          "words": [
+            },
             {
               "german": "Italien",
               "plural": "",
@@ -1373,9 +1376,26 @@
               "cz_gender": "f"
             },
             {
-              "german": "wie",
+              "german": "welcher/welche/welches",
               "plural": "",
               "czech": "jaký/jaká/jaké",
+              "example": ""
+            },
+          ]
+        },
+        {
+          "number": 25,
+          "words": [
+            {
+              "german": "der Austausch",
+              "plural": "-e",
+              "czech": "výměna",
+              "example": ""
+            },
+            {
+              "german": "das Abitur",
+              "plural": "-e",
+              "czech": "Maturita",
               "example": ""
             },
             {
@@ -1384,17 +1404,6 @@
               "czech": "super, skvělý",
               "example": ""
             },
-            {
-              "german": "wenig",
-              "plural": "",
-              "czech": "málo",
-              "example": "ein wenig"
-            }
-          ]
-        },
-        {
-          "number": 11,
-          "words": [
             {
               "german": "ein wenig",
               "plural": "",
@@ -1408,6 +1417,11 @@
               "example": "",
               "cz_gender": "n"
             },
+          ]
+        },
+        {
+          "number": 26,
+          "words": [
             {
               "german": "Deutscher/Deutsche",
               "plural": "",
@@ -1529,6 +1543,11 @@
               "czech": "1000",
               "example": ""
             },
+          ]
+        },
+        {
+          "number": 27,
+          "words": [
             {
               "german": "das Afrika",
               "plural": "",
@@ -1556,12 +1575,7 @@
               "czech": "Austrálie",
               "example": "",
               "cz_gender": "f"
-            }
-          ]
-        },
-        {
-          "number": 12,
-          "words": [
+            },
             {
               "german": "beginnen",
               "plural": "",
@@ -1684,14 +1698,6 @@
             }
           ]
         },
-        {
-          "number": 13,
-          "words": []
-        },
-        {
-          "number": 14,
-          "words": []
-        }
       ]
     },
     {
@@ -1699,7 +1705,7 @@
       "name": "Lekce 3",
       "pages": [
         {
-          "number": 15,
+          "number": 32,
           "words": [
             {
               "german": "die Geburtstagsparty",
@@ -1715,6 +1721,11 @@
               "example": "",
               "cz_gender": "n"
             },
+          ]
+        },
+        {
+          "number": 33,
+          "words": [
             {
               "german": "die Aktivität",
               "plural": "-en",
@@ -1878,12 +1889,7 @@
               "czech": "dům",
               "example": "",
               "cz_gender": "m"
-            }
-          ]
-        },
-        {
-          "number": 16,
-          "words": [
+            },
             {
               "german": "hier",
               "plural": "",
@@ -2060,12 +2066,7 @@
               "plural": "",
               "czech": "mrtvý",
               "example": "Er ist leider schon tot."
-            }
-          ]
-        },
-        {
-          "number": 17,
-          "words": [
+            },
             {
               "german": "Er ist leider schon tot.",
               "plural": "",
@@ -2137,6 +2138,11 @@
               "example": "",
               "cz_gender": "n"
             },
+          ]
+        },
+        {
+          "number": 35,
+          "words": [
             {
               "german": "dein, deine, dein",
               "plural": "",
@@ -2161,6 +2167,11 @@
               "czech": "jeho",
               "example": ""
             },
+          ]
+        },
+        {
+          "number": 36,
+          "words": [
             {
               "german": "bitte",
               "plural": "",
@@ -2234,12 +2245,7 @@
               "plural": "",
               "czech": "grilovat",
               "example": "er grillt"
-            }
-          ]
-        },
-        {
-          "number": 18,
-          "words": [
+            },
             {
               "german": "die Idee",
               "plural": "-n",
@@ -2357,6 +2363,11 @@
               "czech": "doma",
               "example": ""
             },
+          ]
+        },
+        {
+          "number": 37,
+          "words": [
             {
               "german": "das Chamäleon",
               "plural": "-s",
@@ -2419,19 +2430,19 @@
               "czech": "želva",
               "example": "",
               "cz_gender": "f"
-            }
-          ]
-        },
-        {
-          "number": 19,
-          "words": [
+            },
             {
               "german": "das Tier",
               "plural": "-e",
               "czech": "zvíře",
               "example": "",
               "cz_gender": "n"
-            },
+            }
+          ]
+        },
+        {
+          "number": 38,
+          "words": [
             {
               "german": "der Ausflug",
               "plural": "Ausflüge",
@@ -2599,19 +2610,19 @@
               "czech": "zoo",
               "example": "der Zoobesuch",
               "cz_gender": "f"
-            }
-          ]
-        },
-        {
-          "number": 20,
-          "words": [
+            },
             {
               "german": "der Zoobesuch",
               "plural": "-e",
               "czech": "návštěva zoo",
               "example": "",
               "cz_gender": "f"
-            },
+            }
+          ]
+        },
+        {
+          "number": 39,
+          "words": [
             {
               "german": "das Einkaufszentrum",
               "plural": "",
@@ -2678,10 +2689,6 @@
               "example": ""
             }
           ]
-        },
-        {
-          "number": 21,
-          "words": []
         }
       ]
     },
@@ -2690,7 +2697,7 @@
       "name": "Lekce 4",
       "pages": [
         {
-          "number": 22,
+          "number": 44,
           "words": [
             {
               "german": "die Freizeit",
@@ -2719,14 +2726,24 @@
               "czech": "rozvrh hodin",
               "example": "",
               "cz_gender": "m"
-            },
+            }
+          ]
+        },
+        {
+          "number": 45,
+          "words": [
             {
               "german": "die Klasse",
               "plural": "-n",
               "czech": "třída",
               "example": "",
               "cz_gender": "f"
-            },
+            }
+          ]
+        },
+        {
+          "number": 46,
+          "words": [
             {
               "german": "die Bank",
               "plural": "Bänke",
@@ -2865,12 +2882,7 @@
               "czech": "skříň",
               "example": "",
               "cz_gender": "f"
-            }
-          ]
-        },
-        {
-          "number": 23,
-          "words": [
+            },
             {
               "german": "schwarz",
               "plural": "",
@@ -2921,7 +2933,12 @@
               "czech": "bílá tabule, interaktivní tabule",
               "example": "",
               "cz_gender": "f"
-            },
+            }
+          ]
+        },
+        {
+          "number": 47,
+          "words": [
             {
               "german": "die Ahnung",
               "plural": "-en",
@@ -3046,12 +3063,7 @@
               "czech": "desky, složka",
               "example": "",
               "cz_gender": "pl"
-            }
-          ]
-        },
-        {
-          "number": 24,
-          "words": [
+            },
             {
               "german": "der Marker",
               "plural": "-",
@@ -3132,7 +3144,12 @@
               "czech": "kružítko",
               "example": "",
               "cz_gender": "n"
-            },
+            }
+          ]
+        },
+        {
+          "number": 48,
+          "words": [
             {
               "german": "am",
               "plural": "",
@@ -3233,12 +3250,7 @@
               "czech": "domácí úkol",
               "example": "",
               "cz_gender": "m"
-            }
-          ]
-        },
-        {
-          "number": 25,
-          "words": [
+            },
             {
               "german": "die Informatik",
               "plural": "",
@@ -3423,7 +3435,7 @@
           ]
         },
         {
-          "number": 26,
+          "number": 49,
           "words": [
             {
               "german": "dürfen",
@@ -3481,7 +3493,12 @@
               "czech": "hodina",
               "example": "",
               "cz_gender": "f"
-            },
+            }
+          ]
+        },
+        {
+          "number": 50,
+          "words": [
             {
               "german": "bleiben",
               "plural": "",
@@ -3512,7 +3529,12 @@
               "plural": "",
               "czech": "jít do tanečních",
               "example": ""
-            },
+            }
+          ]
+        },
+        {
+          "number": 51,
+          "words": [
             {
               "german": "Es geht …",
               "plural": "",
