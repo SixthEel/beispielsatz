@@ -704,7 +704,6 @@ input:checked + .slider:before { transform: translateX(20px); }
     pointer-events: none;
 }
 
-/* Floating Text Label above Target (No Arrow) */
 /* Floating Text Label above Target */
 .snake-word-tag {
     position: absolute;
@@ -731,6 +730,7 @@ input:checked + .slider:before { transform: translateX(20px); }
     z-index: 40;
     box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* Stronger shadow for contrast */
     pointer-events: none;
+    height: auto; /* Allow height to adjust based on content */
     
     /* Ensure the box has a minimum width so short words look good */
     min-width: 40px; 
