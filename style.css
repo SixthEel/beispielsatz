@@ -705,22 +705,36 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 
 /* Floating Text Label above Target (No Arrow) */
+/* Floating Text Label above Target */
 .snake-word-tag {
     position: absolute;
-    bottom: 125%; /* Pushes text up */
+    /* Pushes text higher up so it doesn't overlap the glow */
+    bottom: 140%; 
     left: 50%;
     transform: translateX(-50%);
+    
     background-color: var(--snake-tag-bg);
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    font-weight: bold;
+    /* Increased padding to fix the "shrunk" look */
+    padding: 8px 14px; 
+    border-radius: 8px;
+    
+    /* Bigger, readable font size */
+    font-size: clamp(14px, 2.5vw, 18px); 
+    font-weight: 800; /* Extra bold for readability */
     color: #fff;
-    border: 1px solid var(--snake-target);
+    
+    /* Fixes vertical alignment */
+    line-height: 1.2; 
+    
+    border: 2px solid var(--snake-target); /* Slightly thicker border */
     white-space: nowrap;
     z-index: 40;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* Stronger shadow for contrast */
     pointer-events: none;
+    
+    /* Ensure the box has a minimum width so short words look good */
+    min-width: 40px; 
+    text-align: center;
 }
 
 .snake-overlay {
