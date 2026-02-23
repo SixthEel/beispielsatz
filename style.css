@@ -25,6 +25,13 @@
     --snake-head: #dc2626;
     --snake-body-1: #34d399;
     --snake-body-2: #059669;
+
+    /* Snake Target Glow Colors (New) */
+    --snake-target: #fbbf24;                    /* Amber 400 - Main Color */
+    --snake-target-glow: rgba(251, 191, 36, 0.5); /* Outer Glow */
+    --snake-target-bg: rgba(251, 191, 36, 0.1);   /* Inner Box Fill */
+    --snake-target-grad: rgba(251, 191, 36, 0.4); /* Gradient Arm Strength */
+    --snake-tag-bg: rgba(15, 23, 42, 0.95);       /* Text Label Background */
 }
 
 * {
@@ -667,8 +674,8 @@ input:checked + .slider:before { transform: translateX(20px); }
     justify-content: center;
     align-items: center;
     z-index: 30;
-    box-shadow: inset 0 0 0 2px #fbbf24, 0 0 15px rgba(251, 191, 36, 0.5);
-    background: rgba(251, 191, 36, 0.1);
+    box-shadow: inset 0 0 0 2px var(--snake-target), 0 0 15px var(--snake-target-glow);
+    background: var(--snake-target-bg);
     border-radius: 4px;
 }
 
@@ -681,7 +688,7 @@ input:checked + .slider:before { transform: translateX(20px); }
     width: 300%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(90deg, transparent 0%, rgba(251, 191, 36, 0.4) 45%, rgba(251, 191, 36, 0.4) 55%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
     pointer-events: none;
 }
 /* Vertical Gradient Arms */
@@ -693,37 +700,27 @@ input:checked + .slider:before { transform: translateX(20px); }
     height: 300%;
     width: 100%;
     z-index: -1;
-    background: linear-gradient(180deg, transparent 0%, rgba(251, 191, 36, 0.4) 45%, rgba(251, 191, 36, 0.4) 55%, transparent 100%);
+    background: linear-gradient(180deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
     pointer-events: none;
 }
 
-/* Floating Text Label above Target */
+/* Floating Text Label above Target (No Arrow) */
 .snake-word-tag {
     position: absolute;
-    bottom: 130%; /* Pushes text up */
+    bottom: 125%; /* Pushes text up */
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(15, 23, 42, 0.95);
+    background-color: var(--snake-tag-bg);
     padding: 4px 8px;
     border-radius: 6px;
     font-size: clamp(0.7rem, 2vw, 0.9rem);
     font-weight: bold;
     color: #fff;
-    border: 1px solid #fbbf24;
+    border: 1px solid var(--snake-target);
     white-space: nowrap;
     z-index: 40;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     pointer-events: none;
-}
-.snake-word-tag::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: #fbbf24 transparent transparent transparent;
 }
 
 .snake-overlay {
