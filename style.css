@@ -770,3 +770,59 @@ input:checked + .slider:before { transform: translateX(20px); }
     
     .flashcard { max-height: 50vh; }
 }
+
+/* FORCE TEXT WRAPPING GLOBALLY */
+* {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto; /* Helps break long German words */
+}
+
+/* FIX BUTTONS ON MOBILE */
+.quiz-options {
+    /* Change to 1 column on mobile so long words fit */
+    grid-template-columns: 1fr !important; 
+    gap: 0.8rem;
+}
+
+/* MAKE BUTTONS GROW WITH TEXT */
+.quiz-btn, 
+.game-btn, 
+.sentence-word {
+    /* Remove fixed heights if any */
+    height: auto !important;
+    min-height: 60px; /* Ensure a good tap target size */
+    
+    /* Allow text to wrap inside */
+    white-space: normal !important; 
+    
+    /* Center text vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Dynamic padding */
+    padding: 1rem 0.5rem !important;
+    
+    /* Responsive font size */
+    font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+    line-height: 1.3;
+}
+
+/* ADJUST THE BIG QUESTION TEXT */
+.quiz-question, 
+.snake-target-word,
+#mainQuestion {
+    font-size: clamp(1.5rem, 6vw, 2.5rem) !important; /* Scale down on mobile */
+    word-break: break-word;
+    padding: 0 10px;
+    line-height: 1.2;
+}
+
+/* RESTORE 2 COLUMNS ON LARGER SCREENS/TABLETS */
+@media (min-width: 500px) {
+    .quiz-options {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
