@@ -93,8 +93,8 @@ class App {
 
         this.data.lessons.forEach((lesson) => {
             const label = document.createElement('label');
-            const name = lesson.name ? ` - ${lesson.name}` : '';
-            label.innerHTML = `<input type="checkbox" value="${lesson.number}" class="lesson-cb" /> ${lesson.number}${name}`;
+            const name = lesson.name ? `${lesson.name}` : '';
+            label.innerHTML = `<input type="checkbox" value="${lesson.number}" class="lesson-cb" /> ${name}`;
             this.checkboxesLessons.appendChild(label);
         });
     }
