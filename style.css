@@ -569,6 +569,7 @@ input:checked + .slider:before { transform: translateX(20px); }
 .feedback-msg { min-height: 2rem; font-weight: bold; margin-bottom: 1rem; }
 
 /* --- SNAKE GAME CONTAINER --- */
+/* --- GAME CONTAINER --- */
 .snake-game-container {
     width: 100%;
     max-width: 600px;
@@ -646,7 +647,7 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 .snake-grid-cell { border: 1px solid rgba(255, 255, 255, 0.03); }
 
-/* --- THE WORD ITEM (The 1x1 Hitbox) --- */
+/* --- THE PARENT ITEM (1x1 Grid Cell) --- */
 .snake-word-item {
     position: absolute;
     width: 6.25%; /* 100% / 16 grid size */
@@ -655,35 +656,36 @@ input:checked + .slider:before { transform: translateX(20px); }
     justify-content: center;
     align-items: center;
     z-index: 30;
-    /* Do NOT style this box, style the .snake-visual-box */
 }
 
-/* --- THE GLOWING SQUARE (Visuals) --- */
+/* --- THE GOLDEN BLOCK (No Glow, Just Gold) --- */
 .snake-visual-box {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    background: var(--snake-target-bg);
-    box-shadow: inset 0 0 0 2px var(--snake-target), 0 0 15px var(--snake-target-glow);
+    
+    /* The Golden Fill */
+    background-color: var(--snake-target-bg);
+    
+    /* The Golden Border */
+    border: 2px solid var(--snake-target);
+    
+    /* Removed box-shadow (Glow) */
+    box-shadow: none;
     z-index: 1;
 }
-/* Gradient Arms */
-.snake-visual-box::before {
-    content: ''; position: absolute; top: 0; left: -100%; width: 300%; height: 100%;
-    background: linear-gradient(90deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
-    pointer-events: none;
-}
+
+/* Remove the gradient arms completely */
+.snake-visual-box::before,
 .snake-visual-box::after {
-    content: ''; position: absolute; top: -100%; left: 0; height: 300%; width: 100%;
-    background: linear-gradient(180deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
-    pointer-events: none;
+    display: none;
 }
 
 /* --- THE FLOATING TEXT (Smart Positioning) --- */
 .snake-label-wrapper {
     position: absolute;
-    bottom: 140%; /* Distance above the square */
+    bottom: 120%; /* Distance above the square */
     width: 0; 
     height: 0; 
     overflow: visible;
@@ -692,36 +694,19 @@ input:checked + .slider:before { transform: translateX(20px); }
     z-index: 100;
 }
 
-/* Default: Center Aligned */
-.snake-label-wrapper.align-center {
-    left: 50%;
-    justify-content: center;
-}
-.snake-label-wrapper.align-center .snake-word-tag {
-    transform: translateX(-50%);
-}
+/* Alignment Classes (Added by JS) */
+.snake-label-wrapper.align-center { left: 50%; justify-content: center; }
+.snake-label-wrapper.align-center .snake-word-tag { transform: translateX(-50%); }
 
-/* Left Edge: Push Right */
-.snake-label-wrapper.align-left {
-    left: 0;
-    justify-content: flex-start;
-}
-.snake-label-wrapper.align-left .snake-word-tag {
-    transform: translateX(-10%); /* Slight nudge */
-}
+.snake-label-wrapper.align-left { left: 0; justify-content: flex-start; }
+.snake-label-wrapper.align-left .snake-word-tag { transform: translateX(-10%); }
 
-/* Right Edge: Push Left */
-.snake-label-wrapper.align-right {
-    right: 0;
-    justify-content: flex-end;
-}
-.snake-label-wrapper.align-right .snake-word-tag {
-    transform: translateX(10%); /* Slight nudge */
-}
+.snake-label-wrapper.align-right { right: 0; justify-content: flex-end; }
+.snake-label-wrapper.align-right .snake-word-tag { transform: translateX(10%); }
 
 /* --- THE ACTUAL TEXT PILL --- */
 .snake-word-tag {
-    width: max-content; /* Force fit text */
+    width: max-content;
     min-width: 60px;
     font-size: 14px;
     font-weight: 800;
@@ -732,8 +717,8 @@ input:checked + .slider:before { transform: translateX(20px); }
     padding: 6px 12px;
     border-radius: 8px;
     border: 2px solid var(--snake-target);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    /* Reset global text wrap */
+    /* Simple shadow for depth, not glow */
+    box-shadow: 0 4px 5px rgba(0,0,0,0.5);
     overflow-wrap: normal;
     word-wrap: normal;
 }
@@ -771,6 +756,7 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 .snake-btn:hover { background-color: var(--secondary); transform: scale(1.05); }
 .snake-footer { margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-muted); text-align: center; line-height: 1.3; }
+
 /* Sentence Builder */
 .sentence-container { text-align: center; max-width: 700px; width: 100%; display: flex; flex-direction: column; gap: 1.5rem; }
 .sentence-prompt {
