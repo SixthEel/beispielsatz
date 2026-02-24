@@ -15,14 +15,10 @@ function speakGerman(text) {
 
 /* =========================================
    [SNAKE, FLASHCARDS, QUIZ, MEMORY, TYPING - ZŮSTÁVAJÍ STEJNÉ]
-   (Zkopíruj si je z předchozí verze nebo je tu nechám pro přehlednost zkrácené)
    ========================================= */
    
-// ... ZDE VLOŽ KÓD OSTATNÍCH HER (Snake, Quiz atd.) Z PŘEDCHOZÍHO SOUBORU ...
-// ... (Pro úsporu místa sem dávám jen ty co se mění: SentenceGameLogic a GameManager)
-
 /* =========================================
-   1. SNAKE GAME LOGIC (Stejné jako minule)
+   1. SNAKE GAME LOGIC 
    ========================================= */
 class SnakeGameLogic {
     constructor(words, container, gridBackground, scoreEl, highScoreEl, targetWordEl, overlay, overlayTitle, overlayBtn, speedEl, isReverse) {
