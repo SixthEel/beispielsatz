@@ -514,573 +514,2461 @@
       ]
     },
     {
-      "number": 9,
-      "name": "Lektion 9",
-      "pages": [
+  "number": 8,
+  "name": "Lektion 8",
+  "pages": [
+    {
+      "number": 102,
+      "words": [
         {
-          "number": 38,
-          "words": [
-            { "german": "allein", "plural": "-", "czech": "sám", "example": "" },
-            { "german": "der Altbau", "plural": "Altbauten", "czech": "stará budova", "example": "", "cz_gender": "f" },
-            { "german": "besser", "plural": "-", "czech": "lepší", "example": "" },
-            { "german": "der Blick", "plural": "-e", "czech": "výhled, pohled", "example": "", "cz_gender": "m" },
-            { "german": "das Dachgeschoss", "plural": "-e", "czech": "podkroví", "example": "", "cz_gender": "n" },
-            { "german": "endlich", "plural": "-", "czech": "konečně", "example": "" },
-            { "german": "das Fachwerkhaus", "plural": "Fachwerkhäuser", "czech": "hrázděný dům", "example": "", "cz_gender": "m" },
-            { "german": "der Keller", "plural": "-", "czech": "sklep", "example": "", "cz_gender": "m" },
-            { "german": "die Küche", "plural": "-n", "czech": "kuchyně", "example": "", "cz_gender": "f" },
-            { "german": "das Landhaus", "plural": "Landhäuser", "czech": "venkovské stavení", "example": "", "cz_gender": "n" }
-          ]
+          "german": "das Geschäft",
+          "plural": "-e",
+          "czech": "obchod",
+          "cz_gender": "m"
         },
         {
-          "number": 39,
-          "words": [
-            { "german": "die Mietwohnung", "plural": "-en", "czech": "nájemní byt", "example": "", "cz_gender": "m" },
-            { "german": "der Neubau", "plural": "-ten", "czech": "novostavba", "example": "", "cz_gender": "f" },
-            { "german": "der Stadtrand", "plural": "Stadtränder", "czech": "periferie, okraj města", "example": "", "cz_gender": "f" },
-            { "german": "der Swimmingpool", "plural": "-s", "czech": "bazén", "example": "", "cz_gender": "m" },
-            { "german": "der Stock", "plural": "Stockwerke", "czech": "patro, poschodí", "example": "", "cz_gender": "n" },
-            { "german": "wirklich", "plural": "-", "czech": "opravdu", "example": "" },
-            { "german": "der Wohnblock", "plural": "Wohnblöcke/-s", "czech": "obytný blok", "example": "", "cz_gender": "m" },
-            { "german": "das Wohnen", "plural": "-", "czech": "bydlení", "example": "", "cz_gender": "n" },
-            { "german": "das Wohnhaus", "plural": "Wohnhäuser", "czech": "obytný dům", "example": "", "cz_gender": "m" },
-            { "german": "das Wohnzimmer", "plural": "-", "czech": "obývací pokoj, obývák", "example": "", "cz_gender": "m" }
-          ]
-        },
-        {
-          "number": 40,
-          "words": [
-            { "german": "die Wohnung", "plural": "-en", "czech": "byt", "example": "", "cz_gender": "m" },
-            { "german": "ziemlich", "plural": "-", "czech": "poměrně, docela", "example": "" },
-            { "german": "die Zwei-Zimmer-Wohnung", "plural": "-en", "czech": "dvoupokojový byt", "example": "", "cz_gender": "m" },
-            { "german": "ab|biegen", "plural": "-", "czech": "zahnout, odbočit", "example": "" },
-            { "german": "der Aufsatz", "plural": "Aufsätze", "czech": "slohová práce", "example": "", "cz_gender": "f" },
-            { "german": "bisschen", "plural": "-", "czech": "málo, trochu", "example": "ein bisschen" },
-            { "german": "das Bauernhaus", "plural": "Bauernhäuser", "czech": "statek", "example": "", "cz_gender": "m" },
-            { "german": "die Brücke", "plural": "-n", "czech": "most", "example": "", "cz_gender": "m" },
-            { "german": "chaotisch", "plural": "-", "czech": "chaotický", "example": "" },
-            { "german": "das Einfamilienhaus", "plural": "Einfamilienhäuser", "czech": "rodinný dům", "example": "", "cz_gender": "m" }
-          ]
-        },
-        {
-          "number": 41,
-          "words": [
-            { "german": "entlang, an ... (+3. p.) entlang", "plural": "-", "czech": "podél, kolem", "example": "" },
-            { "german": "geradeaus", "plural": "-", "czech": "přímo, rovně", "example": "" },
-            { "german": "das Hochhaus", "plural": "Hochhäuser", "czech": "výškový dům", "example": "", "cz_gender": "m" },
-            { "german": "das Holzhaus", "plural": "Holzhäuser", "czech": "dřevostavba", "example": "", "cz_gender": "f" },
-            { "german": "die Kirche", "plural": "-n", "czech": "kostel", "example": "", "cz_gender": "m" },
-            { "german": "malen", "plural": "-", "czech": "malovat", "example": "" },
-            { "german": "das Mehrfamilienhaus", "plural": "Mehrfamilienhäuser", "czech": "bytový dům", "example": "", "cz_gender": "m" },
-            { "german": "die Orientierung", "plural": "-en", "czech": "orientace", "example": "", "cz_gender": "f" },
-            { "german": "der Plattenbau", "plural": "-ten", "czech": "panelový dům", "example": "", "cz_gender": "m" },
-            { "german": "der Platz", "plural": "Plätze", "czech": "náměstí", "example": "", "cz_gender": "n" }
-          ]
-        },
-        {
-          "number": 42,
-          "words": [
-            { "german": "die Polizeidienststelle", "plural": "-n", "czech": "policejní stanice", "example": "", "cz_gender": "f" },
-            { "german": "das Reihenhaus", "plural": "Reihenhäuser", "czech": "řadový dům", "example": "", "cz_gender": "m" },
-            { "german": "die Siedlung", "plural": "-en", "czech": "sídliště", "example": "", "cz_gender": "n" },
-            { "german": "der Stadtplan", "plural": "Stadtpläne", "czech": "mapa města", "example": "", "cz_gender": "f" },
-            { "german": "das Tennis", "plural": "-", "czech": "tenis", "example": "", "cz_gender": "m" },
-            { "german": "die Villa", "plural": "Villen", "czech": "vila", "example": "", "cz_gender": "f" },
-            { "german": "vorbei, an ... (+3. p.) vorbei", "plural": "-", "czech": "kolem", "example": "" },
-            { "german": "warten", "plural": "-", "czech": "čekat", "example": "" },
-            { "german": "der Weg", "plural": "-e", "czech": "cesta", "example": "", "cz_gender": "f" },
-            { "german": "der Wolkenkratzer", "plural": "-", "czech": "mrakodrap", "example": "", "cz_gender": "m" }
-          ]
-        },
-        {
-          "number": 43,
-          "words": [
-            { "german": "die Ampel", "plural": "-n", "czech": "semafor", "example": "", "cz_gender": "m" },
-            { "german": "die Bank", "plural": "-en", "czech": "banka", "example": "", "cz_gender": "f" },
-            { "german": "der Fluss", "plural": "Flüsse", "czech": "řeka", "example": "", "cz_gender": "f" },
-            { "german": "die Fußgängerzone", "plural": "-n", "czech": "pěší zóna", "example": "", "cz_gender": "f" },
-            { "german": "die Haltestelle", "plural": "-n", "czech": "stanice, zastávka", "example": "", "cz_gender": "f" },
-            { "german": "die Kreuzung", "plural": "-en", "czech": "křižovatka", "example": "", "cz_gender": "f" },
-            { "german": "die Linie", "plural": "-n", "czech": "linka", "example": "", "cz_gender": "f" },
-            { "german": "das Rathaus", "plural": "Rathäuser", "czech": "radnice", "example": "", "cz_gender": "f" },
-            { "german": "das Seniorenheim", "plural": "-e", "czech": "domov důchodců", "example": "", "cz_gender": "m" },
-            { "german": "die Straßenbahn", "plural": "-en", "czech": "tramvaj", "example": "", "cz_gender": "f" }
-          ]
-        },
-        {
-          "number": 44,
-          "words": [
-            { "german": "das Studentenwohnheim", "plural": "-e", "czech": "koleje (vysokoškolské)", "example": "", "cz_gender": "pl" },
-            { "german": "das Taxi", "plural": "-s", "czech": "taxi", "example": "", "cz_gender": "n" },
-            { "german": "das Tor", "plural": "-e", "czech": "brána", "example": "", "cz_gender": "f" },
-            { "german": "die U-Bahn", "plural": "-en", "czech": "metro, podzemní dráha", "example": "", "cz_gender": "n" },
-            { "german": "die Unterführung", "plural": "-en", "czech": "podjezd, podchod", "example": "", "cz_gender": "m" },
-            { "german": "das Wohnheim", "plural": "-e", "czech": "domov, ubytovna, internát", "example": "", "cz_gender": "m" },
-            { "german": "das Appartement", "plural": "-s/-e", "czech": "apartmá", "example": "", "cz_gender": "n" },
-            { "german": "das Arbeitszimmer", "plural": "-", "czech": "pracovna", "example": "", "cz_gender": "f" },
-            { "german": "der Balkon", "plural": "-s/-e", "czech": "balkon", "example": "", "cz_gender": "m" },
-            { "german": "bequem", "plural": "-", "czech": "pohodlný", "example": "" }
-          ]
-        },
-        {
-          "number": 45,
-          "words": [
-            { "german": "die Diele", "plural": "-n", "czech": "předsíň, chodba", "example": "", "cz_gender": "f" },
-            { "german": "extra", "plural": "-", "czech": "extra, zvlášť", "example": "" },
-            { "german": "fantastisch", "plural": "-", "czech": "fantastický", "example": "" },
-            { "german": "das Kinderzimmer", "plural": "-", "czech": "dětský pokoj", "example": "", "cz_gender": "m" },
-            { "german": "die Kochecke", "plural": "-n", "czech": "kuchyňský kout", "example": "", "cz_gender": "m" },
-            { "german": "das Mietshaus", "plural": "Mietshäuser", "czech": "nájemní dům", "example": "", "cz_gender": "m" },
-            { "german": "praktisch", "plural": "-", "czech": "praktický", "example": "" },
-            { "german": "reichen", "plural": "-", "czech": "stačit", "example": "" },
-            { "german": "die Sache", "plural": "-n", "czech": "věc", "example": "", "cz_gender": "f" },
-            { "german": "das Schlafzimmer", "plural": "-", "czech": "ložnice", "example": "", "cz_gender": "f" }
-          ]
-        },
-        {
-          "number": 46,
-          "words": [
-            { "german": "zusammen|wohnen", "plural": "-", "czech": "bydlet spolu", "example": "" },
-            { "german": "der Abstellraum", "plural": "Abstellräume", "czech": "komora, skladovací místnost", "example": "", "cz_gender": "f" },
-            { "german": "erforderlich", "plural": "-", "czech": "potřebný, nezbytný", "example": "" },
-            { "german": "die Essecke", "plural": "-n", "czech": "jídelní kout", "example": "", "cz_gender": "m" },
-            { "german": "das Gästezimmer", "plural": "-", "czech": "pokoj pro hosty", "example": "", "cz_gender": "m" },
-            { "german": "das Grundstück", "plural": "-e", "czech": "pozemek", "example": "", "cz_gender": "m" },
-            { "german": "die Kaltmiete", "plural": "-n", "czech": "nájemné bez energií", "example": "", "cz_gender": "n" },
-            { "german": "die Miete", "plural": "-n", "czech": "nájemné", "example": "", "cz_gender": "n" },
-            { "german": "der Nachbar", "plural": "-n", "czech": "soused", "example": "", "cz_gender": "m" },
-            { "german": "der Preis", "plural": "-e", "czech": "cena", "example": "", "cz_gender": "f" }
-          ]
-        },
-        {
-          "number": 47,
-          "words": [
-            { "german": "die Renovierung", "plural": "-en", "czech": "renovace", "example": "", "cz_gender": "f" },
-            { "german": "der Stellplatz", "plural": "Stellplätze", "czech": "(parkovací) místo", "example": "", "cz_gender": "n" },
-            { "german": "die Treppe", "plural": "-n", "czech": "schodiště, schody", "example": "", "cz_gender": "n" },
-            { "german": "vermieten", "plural": "-", "czech": "pronajmout, pronajímat", "example": "" },
-            { "german": "die Wohnfläche", "plural": "-n", "czech": "obytná plocha", "example": "", "cz_gender": "f" },
-            { "german": "der Aufzug", "plural": "Aufzüge", "czech": "výtah", "example": "", "cz_gender": "m" },
-            { "german": "die Badewanne", "plural": "-n", "czech": "vana", "example": "", "cz_gender": "f" },
-            { "german": "der Bücherschrank", "plural": "Bücherschränke", "czech": "knihovna (skříň)", "example": "", "cz_gender": "f" },
-            { "german": "die Couch", "plural": "-(e)s", "czech": "gauč", "example": "", "cz_gender": "m" },
-            { "german": "der Ehrengast", "plural": "Ehrengäste", "czech": "čestný host", "example": "", "cz_gender": "m" }
-          ]
-        },
-        {
-          "number": 48,
-          "words": [
-            { "german": "eigentlich", "plural": "-", "czech": "vlastně", "example": "" },
-            { "german": "einfach", "plural": "-", "czech": "jednoduchý; jednoduše", "example": "" },
-            { "german": "der Esstisch", "plural": "-e", "czech": "jídelní stůl", "example": "", "cz_gender": "m" },
-            { "german": "der Fernseher", "plural": "-", "czech": "televize", "example": "", "cz_gender": "f" },
-            { "german": "gar nicht", "plural": "-", "czech": "vůbec ne", "example": "" },
-            { "german": "die Hand", "plural": "Hände", "czech": "ruka", "example": "Ich muss meine Hände waschen.", "cz_gender": "f" },
-            { "german": "der Herd", "plural": "-e", "czech": "sporák", "example": "", "cz_gender": "m" },
-            { "german": "holen", "plural": "-", "czech": "přinést", "example": "" },
-            { "german": "jung", "plural": "-", "czech": "mladý", "example": "" },
-            { "german": "das Kinderbett", "plural": "-en", "czech": "dětská postýlka", "example": "", "cz_gender": "f" }
-          ]
-        },
-        {
-          "number": 49,
-          "words": [
-            { "german": "die Kommode", "plural": "-n", "czech": "komoda", "example": "", "cz_gender": "f" },
-            { "german": "der Kühlschrank", "plural": "Kühlschränke", "czech": "chladnička, lednička", "example": "", "cz_gender": "f" },
-            { "german": "die Mikrowelle", "plural": "-n", "czech": "mikrovlnná trouba", "example": "", "cz_gender": "f" },
-            { "german": "modern", "plural": "-", "czech": "moderní", "example": "" },
-            { "german": "normalerweise", "plural": "-", "czech": "normálně, obvykle", "example": "" },
-            { "german": "die Panik", "plural": "-", "czech": "panika", "example": "", "cz_gender": "f" },
-            { "german": "das Paradies", "plural": "-e", "czech": "ráj", "example": "", "cz_gender": "m" },
-            { "german": "das Regal", "plural": "-e", "czech": "police", "example": "", "cz_gender": "f" },
-            { "german": "der Schreibtisch", "plural": "-e", "czech": "psací stůl", "example": "", "cz_gender": "m" },
-            { "german": "der Sessel", "plural": "-", "czech": "křeslo", "example": "", "cz_gender": "n" }
-          ]
-        },
-        {
-          "number": 50,
-          "words": [
-            { "german": "das Sofa", "plural": "-s", "czech": "pohovka", "example": "", "cz_gender": "f" },
-            { "german": "der Teppich", "plural": "-e", "czech": "koberec", "example": "", "cz_gender": "m" },
-            { "german": "vorher", "plural": "-", "czech": "předtím, před", "example": "" },
-            { "german": "das Waschbecken", "plural": "-", "czech": "umyvadlo", "example": "", "cz_gender": "n" },
-            { "german": "waschen", "plural": "-", "czech": "mýt; prát", "example": "Ich muss meine Hände waschen." },
-            { "german": "die Waschmaschine", "plural": "-n", "czech": "pračka", "example": "", "cz_gender": "f" },
-            { "german": "hängen", "plural": "-", "czech": "viset; pověsit", "example": "" },
-            { "german": "hinter", "plural": "-", "czech": "za", "example": "" },
-            { "german": "der Kleiderschrank", "plural": "Kleiderschränke", "czech": "šatní skříň", "example": "", "cz_gender": "f" },
-            { "german": "legen", "plural": "-", "czech": "položit", "example": "" }
-          ]
-        },
-        {
-          "number": 51,
-          "words": [
-            { "german": "das Poster", "plural": "-", "czech": "plakát", "example": "", "cz_gender": "m" },
-            { "german": "setzen", "plural": "-", "czech": "posadit", "example": "" },
-            { "german": "stellen", "plural": "-", "czech": "postavit", "example": "" },
-            { "german": "über", "plural": "-", "czech": "nad", "example": "" },
-            { "german": "unter", "plural": "-", "czech": "pod", "example": "" },
-            { "german": "zwischen", "plural": "-", "czech": "mezi", "example": "" },
-            { "german": "dunkel", "plural": "-", "czech": "tmavý", "example": "" },
-            { "german": "die Geige", "plural": "-n", "czech": "housle", "example": "", "cz_gender": "pl" },
-            { "german": "unbequem", "plural": "-", "czech": "nepohodlný", "example": "" },
-            { "german": "ungemütlich", "plural": "-", "czech": "neútulný, nepříjemný", "example": "" },
-            { "german": "werden", "plural": "-", "czech": "stát se, být (budoucí čas)", "example": "" }
-          ]
+          "german": "der Treffpunkt",
+          "plural": "-e",
+          "czech": "místo setkání",
+          "cz_gender": "n"
         }
       ]
     },
     {
-      "number": 10,
-      "name": "Lektion 10",
-      "pages": [
+      "number": 104,
+      "words": [
         {
-          "number": 52,
-          "words": [
-            { "german": "der Berg", "plural": "-e", "czech": "hora", "example": "", "cz_gender": "f" },
-            { "german": "das Bundesland", "plural": "Bundesländer", "czech": "spolková země", "example": "", "cz_gender": "f" },
-            { "german": "geschlossen", "plural": "-", "czech": "zavřeno", "example": "" },
-            { "german": "gestern", "plural": "-", "czech": "včera", "example": "" },
-            { "german": "die Grundschule", "plural": "-n", "czech": "základní škola", "example": "", "cz_gender": "f" },
-            { "german": "die Laune", "plural": "-n", "czech": "nálada", "example": "", "cz_gender": "f" },
-            { "german": "morgen", "plural": "-", "czech": "zítra", "example": "" },
-            { "german": "nervös", "plural": "-", "czech": "nervózní", "example": "" },
-            { "german": "prima", "plural": "-", "czech": "prima", "example": "" },
-            { "german": "der Spaß", "plural": "Späße", "czech": "zábava, legrace", "example": "", "cz_gender": "f" }
-          ]
+          "german": "(sich) aus|denken",
+          "plural": "",
+          "czech": "vymyslet si, promyslet si",
+          "cz_gender": "m"
         },
         {
-          "number": 53,
-          "words": [
-            { "german": "traurig", "plural": "-", "czech": "smutný", "example": "" },
-            { "german": "übermorgen", "plural": "-", "czech": "pozítří", "example": "" },
-            { "german": "vorgestern", "plural": "-", "czech": "předevčírem", "example": "" },
-            { "german": "virtuell", "plural": "-", "czech": "virtuálně", "example": "" },
-            { "german": "die Amtssprache", "plural": "-n", "czech": "úřední jazyk", "example": "", "cz_gender": "m" },
-            { "german": "der größte See", "plural": "-", "czech": "největší jezero", "example": "", "cz_gender": "n" },
-            { "german": "der höchste Berg", "plural": "-", "czech": "nejvyšší hora", "example": "", "cz_gender": "f" },
-            { "german": "der längste Fluss", "plural": "-", "czech": "nejdelší řeka", "example": "", "cz_gender": "f" },
-            { "german": "die Einwohnerzahl", "plural": "-en", "czech": "počet obyvatel", "example": "", "cz_gender": "m" },
-            { "german": "die Fläche", "plural": "-n", "czech": "plocha", "example": "", "cz_gender": "f" }
-          ]
+          "german": "bummeln",
+          "plural": "",
+          "czech": "procházet se, potulovat se",
+          "cz_gender": "m"
         },
         {
-          "number": 54,
-          "words": [
-            { "german": "grenzen", "plural": "-", "czech": "hraničit, sousedit", "example": "+ an (+ 4. p.)" },
-            { "german": "die Hauptstadt", "plural": "Hauptstädte", "czech": "hlavní město", "example": "", "cz_gender": "n" },
-            { "german": "die Internet-TLD", "plural": "-s", "czech": "internetová doména nejvyššího řádu (top-level domain)", "example": "", "cz_gender": "f" },
-            { "german": "das Kfz = Kraftfahrzeug", "plural": "-e", "czech": "automobil", "example": "", "cz_gender": "m" },
-            { "german": "das Kfz-Kennzeichen", "plural": "-", "czech": "SPZ, registrační značka", "example": "", "cz_gender": "f" },
-            { "german": "km² = Quadratkilometer", "plural": "-", "czech": "čtverečný kilometr", "example": "", "cz_gender": "m" },
-            { "german": "die Lage", "plural": "-n", "czech": "poloha", "example": "", "cz_gender": "f" },
-            { "german": "das Mittelleuropa", "plural": "-", "czech": "střední Evropa", "example": "", "cz_gender": "f" },
-            { "german": "der Norden", "plural": "-", "czech": "sever", "example": "im Norden", "cz_gender": "m" },
-            { "german": "der Osten", "plural": "-", "czech": "východ", "example": "im Osten", "cz_gender": "m" }
-          ]
+          "german": "der Bus",
+          "plural": "-se",
+          "czech": "autobus",
+          "cz_gender": "m"
         },
         {
-          "number": 55,
-          "words": [
-            { "german": "die Telefonvorwahl", "plural": "-en", "czech": "telefonní předvolba", "example": "", "cz_gender": "f" },
-            { "german": "der Süden", "plural": "-", "czech": "jih", "example": "im Süden", "cz_gender": "m" },
-            { "german": "die Währung", "plural": "-en", "czech": "měna", "example": "", "cz_gender": "f" },
-            { "german": "das Wappen", "plural": "-", "czech": "erb", "example": "", "cz_gender": "m" },
-            { "german": "der Westen", "plural": "-", "czech": "západ", "example": "im Westen", "cz_gender": "m" },
-            { "german": "der Anfang", "plural": "Anfänge", "czech": "začátek", "example": "am Anfang", "cz_gender": "m" },
-            { "german": "(sich) an|schauen", "plural": "-", "czech": "prohlédnout si", "example": "" },
-            { "german": "der Fan", "plural": "-s", "czech": "fanoušek", "example": "", "cz_gender": "m" },
-            { "german": "früher", "plural": "-", "czech": "dříve", "example": "" },
-            { "german": "das Glück", "plural": "-", "czech": "štěstí", "example": "zum Glück", "cz_gender": "n" }
-          ]
+          "german": "danach",
+          "plural": "",
+          "czech": "potom, nato",
+          "cz_gender": "m"
         },
         {
-          "number": 56,
-          "words": [
-            { "german": "letzter, letzte, letztes", "plural": "-", "czech": "poslední", "example": "" },
-            { "german": "passieren", "plural": "-", "czech": "stát se, přihodit se", "example": "" },
-            { "german": "das Quiz", "plural": "-", "czech": "kvíz", "example": "", "cz_gender": "m" },
-            { "german": "schaffen", "plural": "-", "czech": "stihnout, zvládnout", "example": "" },
-            { "german": "die Sehenswürdigkeit", "plural": "-en", "czech": "pamětihodnost", "example": "", "cz_gender": "f" },
-            { "german": "der Taxifahrer", "plural": "-", "czech": "taxikář", "example": "", "cz_gender": "m" },
-            { "german": "das Angebot", "plural": "-e", "czech": "nabídka", "example": "", "cz_gender": "f" },
-            { "german": "die Erholung", "plural": "-", "czech": "odpočinek, zotavení", "example": "", "cz_gender": "m" },
-            { "german": "erleben", "plural": "-", "czech": "zažít", "example": "" },
-            { "german": "die Ermäßigung", "plural": "-en", "czech": "sleva", "example": "", "cz_gender": "f" }
-          ]
+          "german": "entfernt (sein)",
+          "plural": "",
+          "czech": "(být) vzdálený",
+          "cz_gender": "m"
         },
         {
-          "number": 57,
-          "words": [
-            { "german": "der Experte", "plural": "-n", "czech": "expert", "example": "", "cz_gender": "m" },
-            { "german": "gelten", "plural": "-", "czech": "platit", "example": "" },
-            { "german": "der Infostand", "plural": "Infostände", "czech": "infostánek", "example": "", "cz_gender": "m" },
-            { "german": "nötig", "plural": "-", "czech": "nutný, potřebný", "example": "" },
-            { "german": "schließlich", "plural": "-", "czech": "nakonec, konečně", "example": "" },
-            { "german": "der Schlittschuh", "plural": "-e", "czech": "brusle", "example": "Schlittschuh laufen", "cz_gender": "f" },
-            { "german": "sparen", "plural": "-", "czech": "šetřit, spořit", "example": "" },
-            { "german": "später", "plural": "-", "czech": "později", "example": "" },
-            { "german": "das Symbol", "plural": "-e", "czech": "symbol", "example": "", "cz_gender": "m" },
-            { "german": "der Traum", "plural": "Träume", "czech": "sen", "example": "", "cz_gender": "m" }
-          ]
+          "german": "sich freuen",
+          "plural": "(auf + 4.p)",
+          "czech": "těšit se (na co)",
+          "cz_gender": "m"
         },
         {
-          "number": 58,
-          "words": [
-            { "german": "der Turm", "plural": "Türme", "czech": "věž", "example": "", "cz_gender": "f" },
-            { "german": "die Voranmeldung", "plural": "-en", "czech": "předběžné přihlášení", "example": "", "cz_gender": "n" },
-            { "german": "zuerst", "plural": "-", "czech": "nejprve", "example": "" },
-            { "german": "zuletzt", "plural": "-", "czech": "nakonec", "example": "" },
-            { "german": "berg|steigen", "plural": "-", "czech": "chodit po horách, horolezectví", "example": "" },
-            { "german": "billiger", "plural": "-", "czech": "levnější", "example": "" },
-            { "german": "der Bodensee", "plural": "-", "czech": "Bodamské jezero", "example": "", "cz_gender": "n" },
-            { "german": "der beste Tag", "plural": "-", "czech": "nejlepší den", "example": "", "cz_gender": "m" },
-            { "german": "lieber", "plural": "-", "czech": "raději", "example": "" },
-            { "german": "endlich", "plural": "-", "czech": "konečně, nakonec", "example": "" }
-          ]
+          "german": "der Fuß",
+          "plural": "Füße",
+          "czech": "noha",
+          "cz_gender": "f"
         },
         {
-          "number": 59,
-          "words": [
-            { "german": "fliegen", "plural": "-", "czech": "letět", "example": "" },
-            { "german": "das Flugzeug", "plural": "-e", "czech": "letadlo", "example": "", "cz_gender": "n" },
-            { "german": "der Germknödel", "plural": "-", "czech": "velký kynutý knedlík s povidly", "example": "", "cz_gender": "m" },
-            { "german": "klappen", "plural": "-", "czech": "klapnout, vyjít, podařit se", "example": "es klappt" },
-            { "german": "planen", "plural": "-", "czech": "plánovat", "example": "" },
-            { "german": "die Postkarte", "plural": "-n", "czech": "pohlednice", "example": "", "cz_gender": "f" },
-            { "german": "verlieren", "plural": "-", "czech": "ztratit", "example": "" },
-            { "german": "verschlafen", "plural": "-", "czech": "zaspat", "example": "" },
-            { "german": "die Verspätung", "plural": "-en", "czech": "zpoždění", "example": "", "cz_gender": "n" },
-            { "german": "aus|ruhen", "plural": "-", "czech": "odpočinout si", "example": "" }
-          ]
+          "german": "zu Fuß gehen",
+          "plural": "",
+          "czech": "jít pěšky",
+          "cz_gender": "m"
         },
         {
-          "number": 60,
-          "words": [
-            { "german": "baden", "plural": "-", "czech": "koupat se", "example": "" },
-            { "german": "der Beachvolleyball", "plural": "-", "czech": "plážový volejbal", "example": "", "cz_gender": "m" },
-            { "german": "die Bergsicht", "plural": "-en", "czech": "výhled na hory", "example": "", "cz_gender": "m" },
-            { "german": "das Bobfahren", "plural": "-", "czech": "jízda na bobech", "example": "", "cz_gender": "f" },
-            { "german": "der Campingplatz", "plural": "Campingplätze", "czech": "kemp", "example": "", "cz_gender": "m" },
-            { "german": "das Eishockey", "plural": "-", "czech": "lední hokej", "example": "", "cz_gender": "m" },
-            { "german": "das Eislaufen", "plural": "-", "czech": "bruslení", "example": "", "cz_gender": "n" },
-            { "german": "eis|laufen", "plural": "-", "czech": "bruslit", "example": "" },
-            { "german": "die Ferien", "plural": "-", "czech": "prázdniny", "example": "", "cz_gender": "pl" },
-            { "german": "gratis", "plural": "-", "czech": "zdarma", "example": "" }
-          ]
+          "german": "gegenüber",
+          "plural": "",
+          "czech": "naproti",
+          "cz_gender": "m"
         },
         {
-          "number": 61,
-          "words": [
-            { "german": "ideal", "plural": "-", "czech": "ideální", "example": "" },
-            { "german": "klettern", "plural": "-", "czech": "stoupat, lézt, šplhat na vrchol", "example": "" },
-            { "german": "Langlauf machen", "plural": "-", "czech": "jezdit na běžkách", "example": "" },
-            { "german": "der Liebhaber", "plural": "-", "czech": "milovník, nadšenec", "example": "", "cz_gender": "m" },
-            { "german": "die Natur", "plural": "-", "czech": "příroda", "example": "", "cz_gender": "f" },
-            { "german": "die Rodelbahn", "plural": "-en", "czech": "sáňkařská dráha", "example": "", "cz_gender": "f" },
-            { "german": "rodeln", "plural": "-", "czech": "sáňkovat", "example": "" },
-            { "german": "ruhig", "plural": "-", "czech": "tichý, klidný", "example": "" },
-            { "german": "der Schneemann", "plural": "Schneemänner", "czech": "sněhulák", "example": "einen Schneemann bauen", "cz_gender": "m" },
-            { "german": "der Ski", "plural": "-", "czech": "lyže", "example": "Ski fahren", "cz_gender": "f" }
-          ]
+          "german": "hoffen",
+          "plural": "",
+          "czech": "doufat, věřit",
+          "cz_gender": "m"
         },
         {
-          "number": 62,
-          "words": [
-            { "german": "das Skigebiet", "plural": "-e", "czech": "lyžařský areál", "example": "", "cz_gender": "m" },
-            { "german": "das Snowboard", "plural": "-s", "czech": "snowboard", "example": "Snowboard fahren", "cz_gender": "m" },
-            { "german": "der Sportler", "plural": "-", "czech": "sportovec", "example": "", "cz_gender": "m" },
-            { "german": "der Urlaub", "plural": "-e", "czech": "dovolená", "example": "", "cz_gender": "f" },
-            { "german": "wählen", "plural": "-", "czech": "volit", "example": "" },
-            { "german": "zelten", "plural": "-", "czech": "stanovat", "example": "" },
-            { "german": "deswegen", "plural": "-", "czech": "proto", "example": "" },
-            { "german": "die Olympiahalle", "plural": "-n", "czech": "olympijská hala", "example": "", "cz_gender": "f" },
-            { "german": "der Olympionike", "plural": "-n", "czech": "olympionik", "example": "", "cz_gender": "m" },
-            { "german": "der Schnee", "plural": "-", "czech": "sníh", "example": "", "cz_gender": "m" }
-          ]
+          "german": "das Kaufhaus",
+          "plural": "Kaufhäuser",
+          "czech": "obchodní dům",
+          "cz_gender": "m"
         },
         {
-          "number": 63,
-          "words": [
-            { "german": "die Sportart", "plural": "-en", "czech": "(sportovní) disciplína", "example": "", "cz_gender": "f" },
-            { "german": "überall", "plural": "-", "czech": "všude", "example": "" },
-            { "german": "ungefähr", "plural": "-", "czech": "asi, přibližně", "example": "" },
-            { "german": "unmodern", "plural": "-", "czech": "nemoderní", "example": "" }
-          ]
+          "german": "mit|bringen",
+          "plural": "",
+          "czech": "přinést s sebou",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Nachricht",
+          "plural": "-en",
+          "czech": "zpráva",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Pizzeria",
+          "plural": "Pizzerien",
+          "czech": "pizzeria",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Schwimmhalle",
+          "plural": "-n",
+          "czech": "krytý bazén",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Straße",
+          "plural": "-n",
+          "czech": "ulice",
+          "cz_gender": "f"
+        },
+        {
+          "german": "übernachten",
+          "plural": "",
+          "czech": "přenocovat",
+          "cz_gender": "m"
         }
       ]
     },
     {
-      "number": 10,
-      "name": "Lektion 10",
-      "pages": [
+      "number": 105,
+      "words": [
         {
-          "number": 64,
-          "words": [
-            { "german": "der Anrufbeantworter", "plural": "-", "czech": "telefonní záznamník", "example": "", "cz_gender": "m" },
-            { "german": "blättern", "plural": "(h. geblättert)", "czech": "listovat", "example": "" },
-            { "german": "der Brief", "plural": "-e", "czech": "dopis", "example": "", "cz_gender": "m" },
-            { "german": "der Browser", "plural": "-", "czech": "prohlížeč", "example": "", "cz_gender": "m" },
-            { "german": "der Buchdruck", "plural": "-e", "czech": "knihtisk", "example": "", "cz_gender": "m" },
-            { "german": "die CD", "plural": "-s", "czech": "CD", "example": "", "cz_gender": "n" },
-            { "german": "der Drucker", "plural": "-", "czech": "tiskárna", "example": "", "cz_gender": "f" },
-            { "german": "die DVD", "plural": "-s", "czech": "DVD", "example": "", "cz_gender": "n" },
-            { "german": "der Erfinder", "plural": "-", "czech": "vynálezce", "example": "", "cz_gender": "m" },
-            { "german": "die Erfindung", "plural": "-en", "czech": "vynález", "example": "", "cz_gender": "m" }
-          ]
+          "german": "gerade",
+          "plural": "",
+          "czech": "právě, zrovna",
+          "cz_gender": "m"
         },
         {
-          "number": 65,
-          "words": [
-            { "german": "das Gerät", "plural": "-e", "czech": "přístroj, nástroj", "example": "", "cz_gender": "m" },
-            { "german": "der Goldschmied", "plural": "-e", "czech": "zlatník", "example": "", "cz_gender": "m" },
-            { "german": "googeln", "plural": "(h. gegoogelt)", "czech": "(vy)googlovat", "example": "" },
-            { "german": "her|stellen", "plural": "(h. hergestellt)", "czech": "vyrobit, vyrábět", "example": "" },
-            { "german": "die Kassette", "plural": "-n", "czech": "kazeta", "example": "", "cz_gender": "f" },
-            { "german": "die Mailbox", "plural": "-en", "czech": "e-mailová schránka, poštovní schránka", "example": "", "cz_gender": "f" },
-            { "german": "das Medium", "plural": "Medien/Media", "czech": "médium", "example": "", "cz_gender": "n" },
-            { "german": "prüfen", "plural": "(h. geprüft)", "czech": "ověřit", "example": "" },
-            { "german": "recherchieren", "plural": "(h. recherchiert)", "czech": "pátrat, hledat (informace)", "example": "" },
-            { "german": "die Ruhe", "plural": "(j. č.)", "czech": "klid", "example": "", "cz_gender": "m" }
-          ]
+          "german": "die Konditorei",
+          "plural": "-en",
+          "czech": "cukrárna",
+          "cz_gender": "f"
         },
         {
-          "number": 66,
-          "words": [
-            { "german": "die Schallplatte", "plural": "-n", "czech": "gramofonová deska", "example": "", "cz_gender": "f" },
-            { "german": "das Smartphone", "plural": "-s", "czech": "smartphone, chytrý telefon", "example": "", "cz_gender": "m" },
-            { "german": "das Tablet", "plural": "-s", "czech": "tablet", "example": "", "cz_gender": "m" },
-            { "german": "das Telefon", "plural": "-e", "czech": "telefon", "example": "", "cz_gender": "m" },
-            { "german": "das Telegramm", "plural": "-e", "czech": "telegram", "example": "", "cz_gender": "m" },
-            { "german": "ursprünglich", "plural": "-", "czech": "původní, prvotní", "example": "" },
-            { "german": "die Auszeichnung", "plural": "-en", "czech": "pocta, uznání, vyznamenání", "example": "", "cz_gender": "f" },
-            { "german": "bedeuten", "plural": "(h. bedeutet)", "czech": "znamenat", "example": "" },
-            { "german": "entwickeln", "plural": "(h. entwickelt)", "czech": "vyvíjet", "example": "" },
-            { "german": "erfinden", "plural": "(h. erfunden)", "czech": "vynalézt, objevit", "example": "" }
-          ]
+          "german": "die Mozartschnitten",
+          "plural": "(mn. č.)",
+          "czech": "Mozartovy řezy",
+          "cz_gender": "pl"
         },
         {
-          "number": 67,
-          "words": [
-            { "german": "das Handwerk", "plural": "-e", "czech": "řemeslo", "example": "", "cz_gender": "n" },
-            { "german": "hochwertig", "plural": "-", "czech": "kvalitní, hodnotný", "example": "" },
-            { "german": "das Holz", "plural": "Hölzer", "czech": "dřevo", "example": "", "cz_gender": "n" },
-            { "german": "das Jahrtausend", "plural": "-e", "czech": "tisíciletí", "example": "", "cz_gender": "n" },
-            { "german": "die Produktion", "plural": "(j. č.)", "czech": "produkce, výroba", "example": "", "cz_gender": "f" },
-            { "german": "schnitzen", "plural": "(h. geschnitzt)", "czech": "vyřezat, vyřezávat", "example": "" },
-            { "german": "die Absicht", "plural": "-en", "czech": "záměr, úmysl", "example": "", "cz_gender": "m" },
-            { "german": "ab und zu", "plural": "-", "czech": "tu a tam", "example": "" },
-            { "german": "die Achtung", "plural": "(j. č.)", "czech": "pozor", "example": "", "cz_gender": "m" },
-            { "german": "die Bergwacht", "plural": "-en", "czech": "horská služba", "example": "", "cz_gender": "f" }
-          ]
+          "german": "der Zug",
+          "plural": "Züge",
+          "czech": "vlak",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 106,
+      "words": [
+        {
+          "german": "direkt",
+          "plural": "",
+          "czech": "přímo",
+          "cz_gender": "m"
         },
         {
-          "number": 68,
-          "words": [
-            { "german": "der Delfin", "plural": "-e", "czech": "delfín", "example": "", "cz_gender": "m" },
-            { "german": "die Eins", "plural": "-en", "czech": "jednička (známka)", "example": "", "cz_gender": "f" },
-            { "german": "sich erinnern", "plural": "(h. erinnert) (an + 4. p.)", "czech": "vzpomenout si, pamatovat si", "example": "" },
-            { "german": "die Fake News", "plural": "-", "czech": "fake news", "example": "", "cz_gender": "pl" },
-            { "german": "häufig", "plural": "-", "czech": "častý", "example": "" },
-            { "german": "der Hubschrauber", "plural": "-", "czech": "vrtulník, helikoptéra", "example": "", "cz_gender": "m" },
-            { "german": "(sich) kümmern", "plural": "(h. gekümmert) (um + 4. p.)", "czech": "starat se, pečovat (o)", "example": "" },
-            { "german": "das Pech", "plural": "(j. č.)", "czech": "smůla, pech", "example": "", "cz_gender": "f" },
-            { "german": "Pech haben", "plural": "-", "czech": "mít smůlu", "example": "" },
-            { "german": "der Profi", "plural": "-s", "czech": "profík", "example": "", "cz_gender": "m" }
-          ]
+          "german": "der Dom",
+          "plural": "-e",
+          "czech": "dóm, katedrála",
+          "cz_gender": "m"
         },
         {
-          "number": 69,
-          "words": [
-            { "german": "rein|legen", "plural": "(h. reingelegt) hovor.", "czech": "napálit", "example": "" },
-            { "german": "die Rettung", "plural": "-en", "czech": "záchrana, záchranná služba (Rakousko)", "example": "", "cz_gender": "f" },
-            { "german": "sauber", "plural": "-", "czech": "čistý", "example": "" },
-            { "german": "schmutzig", "plural": "-", "czech": "špinavý", "example": "" },
-            { "german": "tatsächlich", "plural": "-", "czech": "skutečně, opravdu", "example": "" },
-            { "german": "die Überraschung", "plural": "-en", "czech": "překvapení", "example": "", "cz_gender": "n" },
-            { "german": "das Unglück", "plural": "-e", "czech": "neštěstí", "example": "", "cz_gender": "n" },
-            { "german": "der Unsinn", "plural": "(j. č.)", "czech": "nesmysl, hloupost", "example": "", "cz_gender": "m" },
-            { "german": "vor|kommen", "plural": "(i. vorgekommen)", "czech": "vyskytovat se, existovat", "example": "" },
-            { "german": "vor|tragen", "plural": "(h. vorgetragen)", "czech": "přednést, prezentovat", "example": "" }
-          ]
+          "german": "die Festung",
+          "plural": "-en",
+          "czech": "pevnost",
+          "cz_gender": "f"
         },
         {
-          "number": 70,
-          "words": [
-            { "german": "die Bitte", "plural": "-n (an + 4. p.)", "czech": "prosba, žádost", "example": "", "cz_gender": "f" },
-            { "german": "die Boulevardzeitung", "plural": "-en", "czech": "bulvární noviny", "example": "", "cz_gender": "pl" },
-            { "german": "gedruckt", "plural": "-", "czech": "tištěný", "example": "" },
-            { "german": "die Grafik", "plural": "-en", "czech": "grafika", "example": "", "cz_gender": "f" },
-            { "german": "gründen", "plural": "(h. gegründet)", "czech": "založit, zřídit", "example": "" },
-            { "german": "heraus|geben", "plural": "(h. herausgegeben)", "czech": "vydat, vydávat", "example": "" },
-            { "german": "die Korrektur", "plural": "-en", "czech": "korektura", "example": "", "cz_gender": "f" },
-            { "german": "der Ratschlag", "plural": "Ratschläge", "czech": "rada, doporučení", "example": "", "cz_gender": "f" },
-            { "german": "der Redakteur", "plural": "-e", "czech": "redaktor", "example": "", "cz_gender": "m" },
-            { "german": "die Redakteurin", "plural": "-nen", "czech": "redaktorka", "example": "", "cz_gender": "f" }
-          ]
+          "german": "der Flughafen",
+          "plural": "Flughäfen",
+          "czech": "letiště",
+          "cz_gender": "n"
         },
         {
-          "number": 71,
-          "words": [
-            { "german": "das Sagen haben", "plural": "(hovor.)", "czech": "mít hlavní slovo", "example": "" },
-            { "german": "die Werbung", "plural": "-en", "czech": "reklama", "example": "", "cz_gender": "f" },
-            { "german": "zu fünft", "plural": "-", "czech": "v pěti, po pěti", "example": "" },
-            { "german": "zusammen|stellen", "plural": "(h. zusammengestellt)", "czech": "sestavit, naplánovat", "example": "" },
-            { "german": "an|locken", "plural": "(h. angelockt)", "czech": "přilákat", "example": "" },
-            { "german": "die Bedingung", "plural": "-en", "czech": "podmínka", "example": "", "cz_gender": "f" },
-            { "german": "bestehen", "plural": "(h. bestanden)", "czech": "složit (zkoušku)", "example": "" },
-            { "german": "durch|fallen", "plural": "(i. durchgefallen) hovor.", "czech": "propadnout, proletět (u zkoušky)", "example": "" },
-            { "german": "der Durchschnitt", "plural": "-e", "czech": "průměr", "example": "", "cz_gender": "m" },
-            { "german": "ein|führen", "plural": "(h. eingeführt)", "czech": "zavést, zavádět", "example": "" }
-          ]
+          "german": "die Gasse",
+          "plural": "-n",
+          "czech": "ulička, ulice",
+          "cz_gender": "f"
         },
         {
-          "number": 72,
-          "words": [
-            { "german": "eröffnen", "plural": "(h. eröffnet)", "czech": "otevřít, zahájit", "example": "" },
-            { "german": "krass", "plural": "-", "czech": "extrémní, evidentní, křiklavý", "example": "" },
-            { "german": "der Link", "plural": "-s", "czech": "link", "example": "", "cz_gender": "m" },
-            { "german": "die Mensa", "plural": "-s/Mensen", "czech": "jídelna, menza", "example": "", "cz_gender": "f" },
-            { "german": "die Note", "plural": "-n", "czech": "známka", "example": "", "cz_gender": "f" },
-            { "german": "der Sieger", "plural": "-", "czech": "vítěz", "example": "", "cz_gender": "m" },
-            { "german": "der Überblick", "plural": "-e", "czech": "přehled", "example": "", "cz_gender": "m" },
-            { "german": "überprüfen", "plural": "(h. überprüft)", "czech": "zkontrolovat, ověřit", "example": "" },
-            { "german": "die Überschrift", "plural": "-en", "czech": "nadpis", "example": "", "cz_gender": "m" },
-            { "german": "der Unterschied", "plural": "-e", "czech": "rozdíl", "example": "", "cz_gender": "m" }
-          ]
+          "german": "das Geburtshaus",
+          "plural": "",
+          "czech": "rodný dům",
+          "cz_gender": "m"
         },
         {
-          "number": 73,
-          "words": [
-            { "german": "verschwinden", "plural": "(i. verschwunden)", "czech": "zmizet", "example": "" },
-            { "german": "vorbei", "plural": "-", "czech": "pryč, u konce", "example": "" },
-            { "german": "die Zusammenfassung", "plural": "-en", "czech": "shrnutí", "example": "", "cz_gender": "n" },
-            { "german": "derjenige, diejenige, dasjenige", "plural": "-", "czech": "ten, ta, to / onen, ona, ono", "example": "" },
-            { "german": "intim", "plural": "-", "czech": "intimní, soukromý, důvěrný", "example": "" },
-            { "german": "mutig", "plural": "-", "czech": "smělý, odvážný", "example": "" },
-            { "german": "neidisch", "plural": "-", "czech": "závistivý", "example": "" },
-            { "german": "peinlich", "plural": "-", "czech": "trapný", "example": "" },
-            { "german": "übrigens", "plural": "-", "czech": "mimochodem, ostatně", "example": "" },
-            { "german": "der Bildschirm", "plural": "-e", "czech": "obrazovka, monitor", "example": "", "cz_gender": "f" }
-          ]
+          "german": "der Hauptbahnhof",
+          "plural": "Hauptbahnhöfe",
+          "czech": "hlavní nádraží",
+          "cz_gender": "n"
         },
         {
-          "number": 74,
-          "words": [
-            { "german": "das Cybermobbing", "plural": "(j. č.)", "czech": "kyberšikana", "example": "", "cz_gender": "f" },
-            { "german": "folgen", "plural": "(i. gefolgt) (+ 3. p.)", "czech": "sledovat", "example": "" },
-            { "german": "hinterlassen", "plural": "(h. hinterlassen)", "czech": "zanechat (po sobě)", "example": "" },
-            { "german": "der Influencer", "plural": "-", "czech": "influencer", "example": "", "cz_gender": "m" },
-            { "german": "die Influencerin", "plural": "-nen", "czech": "influencerka", "example": "", "cz_gender": "f" },
-            { "german": "missbrauchen", "plural": "(h. missbraucht)", "czech": "zneužít", "example": "" },
-            { "german": "der Nachteil", "plural": "-e", "czech": "nevýhoda", "example": "", "cz_gender": "f" },
-            { "german": "sich schämen", "plural": "(h. geschämt)", "czech": "stydět se, ostýchat se", "example": "" },
-            { "german": "schüchtern", "plural": "-", "czech": "plachý, ostýchavý, nesmělý", "example": "" },
-            { "german": "die Spur", "plural": "-en", "czech": "stopa", "example": "", "cz_gender": "f" },
-            { "german": "der Vorteil", "plural": "-e", "czech": "výhoda", "example": "", "cz_gender": "f" }
-          ]
+          "german": "das Hotel",
+          "plural": "-s",
+          "czech": "hotel",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Mozartkugeln",
+          "plural": "(mn. č.)",
+          "czech": "Mozartovy koule",
+          "cz_gender": "pl"
+        },
+        {
+          "german": "der Plan",
+          "plural": "Pläne",
+          "czech": "plán",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Wohnung",
+          "plural": "-en",
+          "czech": "byt",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 107,
+      "words": [
+        {
+          "german": "die Abteilung",
+          "plural": "-en",
+          "czech": "oddělení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Apotheke",
+          "plural": "-n",
+          "czech": "lékárna",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Bäckerei",
+          "plural": "-en",
+          "czech": "pekařství",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Bioladen",
+          "plural": "Bioläden",
+          "czech": "bioobchod",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Buchhandlung",
+          "plural": "-en",
+          "czech": "knihkupectví",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Delikatesse",
+          "plural": "-n",
+          "czech": "lahůdka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der dritte",
+          "plural": "",
+          "czech": "třetí",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Eisdiele",
+          "plural": "-n",
+          "czech": "zmrzlinářství",
+          "cz_gender": "n"
+        }
+      ]
+    },
+    {
+      "number": 108,
+      "words": [
+        {
+          "german": "die Elektronik",
+          "plural": "-en",
+          "czech": "elektronika",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Erdgeschoss",
+          "plural": "-e",
+          "czech": "přízemí",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der erste",
+          "plural": "",
+          "czech": "první",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Etage",
+          "plural": "-n",
+          "czech": "patro",
+          "cz_gender": "n"
+        },
+        {
+          "german": "finden",
+          "plural": "",
+          "czech": "najít",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Garage",
+          "plural": "-n",
+          "czech": "garáž",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Haustechnik",
+          "plural": "(j. č.)",
+          "czech": "domácí technika",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Kinderraum",
+          "plural": "",
+          "czech": "dětský koutek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Laden",
+          "plural": "Läden",
+          "czech": "obchod",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Metzgerei",
+          "plural": "-en",
+          "czech": "řeznictví",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Mode",
+          "plural": "",
+          "czech": "móda",
+          "cz_gender": "f"
+        },
+        {
+          "german": "neben",
+          "plural": "",
+          "czech": "vedle",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Parfüm",
+          "plural": "-e/-s",
+          "czech": "parfém",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Schmuck",
+          "plural": "(j. č.)",
+          "czech": "šperk, klenot",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Schuh",
+          "plural": "-e",
+          "czech": "bota",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Souvenirshop",
+          "plural": "-s",
+          "czech": "obchod se suvenýry",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Spielzeug",
+          "plural": "-e",
+          "czech": "hračka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Supermarkt",
+          "plural": "Supermärkte",
+          "czech": "supermarket",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Toilette",
+          "plural": "-n",
+          "czech": "záchod",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Untergeschoss",
+          "plural": "-e",
+          "czech": "suterén",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der zweite",
+          "plural": "",
+          "czech": "druhý",
+          "cz_gender": "m"
+        },
+        {
+          "german": "besorgen",
+          "plural": "",
+          "czech": "obstarat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Drogerie",
+          "plural": "-n",
+          "czech": "drogerie",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Einkaufsliste",
+          "plural": "-n",
+          "czech": "nákupní seznam",
+          "cz_gender": "m"
+        },
+        {
+          "german": "frisch",
+          "plural": "",
+          "czech": "čerstvý",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Gramm",
+          "plural": "-/-e",
+          "czech": "gram",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Keks",
+          "plural": "-e",
+          "czech": "keks, sušenka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Kleidung",
+          "plural": "(j. č.)",
+          "czech": "oblečení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Kiosk",
+          "plural": "-e",
+          "czech": "stánek, kiosk",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Liter",
+          "plural": "-",
+          "czech": "litr",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Markt",
+          "plural": "Märkte",
+          "czech": "trh, tržiště",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Medikament",
+          "plural": "-e",
+          "czech": "lék",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Packung",
+          "plural": "-en",
+          "czech": "balení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Reiseführer",
+          "plural": "-",
+          "czech": "(cestovní) průvodce",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Shampoo",
+          "plural": "-s",
+          "czech": "šampon",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Vollkornbrot",
+          "plural": "-e",
+          "czech": "celozrnný chléb",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Zeitung",
+          "plural": "-en",
+          "czech": "noviny",
+          "cz_gender": "pl"
+        }
+      ]
+    },
+    {
+      "number": 109,
+      "words": [
+        {
+          "german": "bekommen",
+          "plural": "",
+          "czech": "dostat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Cent",
+          "plural": "-/-s",
+          "czech": "cent",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Dose",
+          "plural": "-n",
+          "czech": "plechovka, dóza, konzerva",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 110,
+      "words": [
+        {
+          "german": "ebenfalls",
+          "plural": "",
+          "czech": "rovněž, také",
+          "cz_gender": "m"
+        },
+        {
+          "german": "eigen",
+          "plural": "",
+          "czech": "vlastní, svůj",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Flasche",
+          "plural": "-n",
+          "czech": "láhev",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Kilo",
+          "plural": "-(s)",
+          "czech": "kilo(gram)",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Kunde",
+          "plural": "-n",
+          "czech": "zákazník",
+          "cz_gender": "m"
+        },
+        {
+          "german": "probieren",
+          "plural": "",
+          "czech": "ochutnat; vyzkoušet",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Schachtel",
+          "plural": "-n",
+          "czech": "krabička, krabice, balíček",
+          "cz_gender": "f"
+        },
+        {
+          "german": "sonst",
+          "plural": "",
+          "czech": "jinak",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Tafel",
+          "plural": "-n",
+          "czech": "tabulka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Tüte",
+          "plural": "-n",
+          "czech": "sáček, igelitová taška",
+          "cz_gender": "f"
+        },
+        {
+          "german": "ab|fahren",
+          "plural": "",
+          "czech": "odjet",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Briefmarke",
+          "plural": "-n",
+          "czech": "poštovní známka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "joggen",
+          "plural": "",
+          "czech": "joggovat, běhat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Post",
+          "plural": "(j. č.)",
+          "czech": "pošta",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Stadion",
+          "plural": "Stadien",
+          "czech": "stadion",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Trilobit",
+          "plural": "-en",
+          "czech": "trilobit",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 111,
+      "words": [
+        {
+          "german": "der April",
+          "plural": "",
+          "czech": "duben",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der August",
+          "plural": "",
+          "czech": "srpen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Bühne",
+          "plural": "-n",
+          "czech": "jeviště, divadlo, scéna",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Dezember",
+          "plural": "",
+          "czech": "prosinec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Februar",
+          "plural": "",
+          "czech": "únor",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Januar",
+          "plural": "",
+          "czech": "leden",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Juli",
+          "plural": "",
+          "czech": "červenec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Juni",
+          "plural": "",
+          "czech": "červen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Karriere",
+          "plural": "-n",
+          "czech": "kariéra",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Kinosaal",
+          "plural": "Kinosäle",
+          "czech": "kinosál",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Mai",
+          "plural": "",
+          "czech": "květen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der März",
+          "plural": "",
+          "czech": "březen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der November",
+          "plural": "",
+          "czech": "listopad",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Oktober",
+          "plural": "",
+          "czech": "říjen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Publikum",
+          "plural": "(j. č.)",
+          "czech": "publikum",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Sänger",
+          "plural": "-",
+          "czech": "zpěvák",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der September",
+          "plural": "",
+          "czech": "září",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Star",
+          "plural": "-s",
+          "czech": "star, hvězda",
+          "cz_gender": "f"
+        },
+        {
+          "german": "vor|schlagen",
+          "plural": "",
+          "czech": "navrhnout, doporučit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "werden",
+          "plural": "",
+          "czech": "stát se",
+          "cz_gender": "m"
         }
       ]
     }
+  ]
+},
+{
+  "number": 9,
+  "name": "Lektion 9",
+  "pages": [
+    {
+      "number": 116,
+      "words": [
+        {
+          "german": "die Wegbeschreibung",
+          "plural": "-en",
+          "czech": "popis cesty",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Zimmer",
+          "plural": "-",
+          "czech": "pokoj",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 117,
+      "words": [
+        {
+          "german": "das Land",
+          "plural": "Länder",
+          "czech": "země; venkov",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Stadt",
+          "plural": "Städte",
+          "czech": "město",
+          "cz_gender": "n"
+        }
+      ]
+    },
+    {
+      "number": 118,
+      "words": [
+        {
+          "german": "allein",
+          "plural": "",
+          "czech": "sám",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Altbau",
+          "plural": "Altbauten",
+          "czech": "stará budova",
+          "cz_gender": "f"
+        },
+        {
+          "german": "besser",
+          "plural": "",
+          "czech": "lepší",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Blick",
+          "plural": "-e",
+          "czech": "výhled, pohled",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Dachgeschoss",
+          "plural": "-e",
+          "czech": "podkroví",
+          "cz_gender": "n"
+        },
+        {
+          "german": "endlich",
+          "plural": "",
+          "czech": "konečně",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Fachwerkhaus",
+          "plural": "Fachwerkhäuser",
+          "czech": "hrázděný dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Keller",
+          "plural": "-",
+          "czech": "sklep",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Küche",
+          "plural": "-n",
+          "czech": "kuchyně",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Landhaus",
+          "plural": "Landhäuser",
+          "czech": "venkovské stavení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Mietwohnung",
+          "plural": "-en",
+          "czech": "nájemní byt",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Neubau",
+          "plural": "-ten",
+          "czech": "novostavba",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Stadtrand",
+          "plural": "Stadtränder",
+          "czech": "periferie, okraj města",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Swimmingpool",
+          "plural": "-s",
+          "czech": "bazén",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Stock",
+          "plural": "Stockwerke",
+          "czech": "patro, poschodí",
+          "cz_gender": "n"
+        },
+        {
+          "german": "wirklich",
+          "plural": "",
+          "czech": "opravdu",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Wohnblock",
+          "plural": "Wohnblöcke/-s",
+          "czech": "obytný blok",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Wohnen",
+          "plural": "(j. č.)",
+          "czech": "bydlení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Wohnhaus",
+          "plural": "Wohnhäuser",
+          "czech": "obytný dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Wohnzimmer",
+          "plural": "-",
+          "czech": "obývací pokoj, obývák",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Zentrum",
+          "plural": "Zentren",
+          "czech": "centrum",
+          "cz_gender": "n"
+        }
+      ]
+    },
+    {
+      "number": 119,
+      "words": [
+        {
+          "german": "ziemlich",
+          "plural": "",
+          "czech": "poměrně, docela",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Zwei-Zimmer-Wohnung",
+          "plural": "-en",
+          "czech": "dvoupokojový byt",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ab|biegen",
+          "plural": "er biegt ab",
+          "czech": "zahnout, odbočit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Aufsatz",
+          "plural": "Aufsätze",
+          "czech": "slohová práce",
+          "cz_gender": "f"
+        },
+        {
+          "german": "bisschen",
+          "plural": "",
+          "czech": "málo, trochu",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ein bisschen",
+          "plural": "",
+          "czech": "trochu",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Bauernhaus",
+          "plural": "Bauernhäuser",
+          "czech": "statek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Brücke",
+          "plural": "-n",
+          "czech": "most",
+          "cz_gender": "m"
+        },
+        {
+          "german": "chaotisch",
+          "plural": "",
+          "czech": "chaotický",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Einfamilienhaus",
+          "plural": "Einfamilienhäuser",
+          "czech": "rodinný dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "entlang",
+          "plural": "",
+          "czech": "podél, kolem",
+          "cz_gender": "m"
+        },
+        {
+          "german": "geradeaus",
+          "plural": "",
+          "czech": "přímo, rovně",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Hochhaus",
+          "plural": "Hochhäuser",
+          "czech": "výškový dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Holzhaus",
+          "plural": "Holzhäuser",
+          "czech": "dřevostavba",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Kirche",
+          "plural": "-n",
+          "czech": "kostel",
+          "cz_gender": "m"
+        },
+        {
+          "german": "malen",
+          "plural": "er malt",
+          "czech": "malovat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Mehrfamilienhaus",
+          "plural": "Mehrfamilienhäuser",
+          "czech": "bytový dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Orientierung",
+          "plural": "-en",
+          "czech": "orientace",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Plattenbau",
+          "plural": "-ten",
+          "czech": "panelový dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Platz",
+          "plural": "Plätze",
+          "czech": "náměstí",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Polizeidienststelle",
+          "plural": "-n",
+          "czech": "policejní stanice",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Reihenhaus",
+          "plural": "Reihenhäuser",
+          "czech": "řadový dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Siedlung",
+          "plural": "-en",
+          "czech": "sídliště",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Stadtplan",
+          "plural": "Stadtpläne",
+          "czech": "mapa města",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Tennis",
+          "plural": "(j. č.)",
+          "czech": "tenis",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Villa",
+          "plural": "Villen",
+          "czech": "vila",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 120,
+      "words": [
+        {
+          "german": "vorbei",
+          "plural": "(an ... + 3. p. vorbei)",
+          "czech": "kolem",
+          "cz_gender": "m"
+        },
+        {
+          "german": "warten",
+          "plural": "er wartet",
+          "czech": "čekat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Weg",
+          "plural": "-e",
+          "czech": "cesta",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Wolkenkratzer",
+          "plural": "-",
+          "czech": "mrakodrap",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Ampel",
+          "plural": "-n",
+          "czech": "semafor",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Bank",
+          "plural": "-en",
+          "czech": "banka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Fluss",
+          "plural": "Flüsse",
+          "czech": "řeka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Fußgängerzone",
+          "plural": "-n",
+          "czech": "pěší zóna",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Haltestelle",
+          "plural": "-n",
+          "czech": "stanice, zastávka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Kreuzung",
+          "plural": "-en",
+          "czech": "křižovatka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Linie",
+          "plural": "-n",
+          "czech": "linka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Rathaus",
+          "plural": "Rathäuser",
+          "czech": "radnice",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Seniorenheim",
+          "plural": "-e",
+          "czech": "domov důchodců",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Straßenbahn",
+          "plural": "-en",
+          "czech": "tramvaj",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Studentenwohnheim",
+          "plural": "-e",
+          "czech": "koleje (vysokoškolské)",
+          "cz_gender": "pl"
+        },
+        {
+          "german": "das Taxi",
+          "plural": "-s",
+          "czech": "taxi",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Tor",
+          "plural": "-e",
+          "czech": "brána",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die U-Bahn",
+          "plural": "-en",
+          "czech": "metro, podzemní dráha",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Unterführung",
+          "plural": "-en",
+          "czech": "podjezd, podchod",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Wohnheim",
+          "plural": "-e",
+          "czech": "domov, ubytovna, internát",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 121,
+      "words": [
+        {
+          "german": "das Appartement",
+          "plural": "-s/-e",
+          "czech": "apartmá",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Arbeitszimmer",
+          "plural": "-",
+          "czech": "pracovna",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Balkon",
+          "plural": "-s/-e",
+          "czech": "balkon",
+          "cz_gender": "m"
+        },
+        {
+          "german": "bequem",
+          "plural": "",
+          "czech": "pohodlný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Diele",
+          "plural": "-n",
+          "czech": "předsíň, chodba",
+          "cz_gender": "f"
+        },
+        {
+          "german": "extra",
+          "plural": "",
+          "czech": "extra, zvlášť",
+          "cz_gender": "m"
+        },
+        {
+          "german": "fantastisch",
+          "plural": "",
+          "czech": "fantastický",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Kinderzimmer",
+          "plural": "-",
+          "czech": "dětský pokoj",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Kochecke",
+          "plural": "-n",
+          "czech": "kuchyňský kout",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Mietshaus",
+          "plural": "Mietshäuser",
+          "czech": "nájemní dům",
+          "cz_gender": "m"
+        },
+        {
+          "german": "praktisch",
+          "plural": "",
+          "czech": "praktický",
+          "cz_gender": "m"
+        },
+        {
+          "german": "reichen",
+          "plural": "er reicht",
+          "czech": "stačit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Sache",
+          "plural": "-n",
+          "czech": "věc",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Schlafzimmer",
+          "plural": "-",
+          "czech": "ložnice",
+          "cz_gender": "f"
+        },
+        {
+          "german": "zusammen|wohnen",
+          "plural": "sie wohnen zusammen",
+          "czech": "bydlet spolu",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 122,
+      "words": [
+        {
+          "german": "der Abstellraum",
+          "plural": "Abstellräume",
+          "czech": "komora, skladovací místnost",
+          "cz_gender": "f"
+        },
+        {
+          "german": "erforderlich",
+          "plural": "",
+          "czech": "potřebný, nezbytný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Essecke",
+          "plural": "-n",
+          "czech": "jídelní kout",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Gästezimmer",
+          "plural": "-",
+          "czech": "pokoj pro hosty",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Grundstück",
+          "plural": "-e",
+          "czech": "pozemek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Kaltmiete",
+          "plural": "-n",
+          "czech": "nájemné bez energií",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Miete",
+          "plural": "-n",
+          "czech": "nájemné",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Nachbar",
+          "plural": "-n",
+          "czech": "soused",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Preis",
+          "plural": "-e",
+          "czech": "cena",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Renovierung",
+          "plural": "-en",
+          "czech": "renovace",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Stellplatz",
+          "plural": "Stellplätze",
+          "czech": "(parkovací) místo",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Treppe",
+          "plural": "-n",
+          "czech": "schodiště, schody",
+          "cz_gender": "n"
+        },
+        {
+          "german": "vermieten",
+          "plural": "er vermietet",
+          "czech": "pronajmout, pronajímat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Wohnfläche",
+          "plural": "-n",
+          "czech": "obytná plocha",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 123,
+      "words": [
+        {
+          "german": "der Aufzug",
+          "plural": "Aufzüge",
+          "czech": "výtah",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Badewanne",
+          "plural": "-n",
+          "czech": "vana",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Bücherschrank",
+          "plural": "Bücherschränke",
+          "czech": "knihovna",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Couch",
+          "plural": "-(e)s",
+          "czech": "gauč",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Ehrengast",
+          "plural": "Ehrengäste",
+          "czech": "čestný host",
+          "cz_gender": "m"
+        },
+        {
+          "german": "eigentlich",
+          "plural": "",
+          "czech": "vlastně",
+          "cz_gender": "m"
+        },
+        {
+          "german": "einfach",
+          "plural": "",
+          "czech": "jednoduchý; jednoduše",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Esstisch",
+          "plural": "-e",
+          "czech": "jídelní stůl",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Fernseher",
+          "plural": "-",
+          "czech": "televize",
+          "cz_gender": "f"
+        },
+        {
+          "german": "gar nicht",
+          "plural": "",
+          "czech": "vůbec ne",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Hand",
+          "plural": "Hände",
+          "czech": "ruka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Herd",
+          "plural": "-e",
+          "czech": "sporák",
+          "cz_gender": "m"
+        },
+        {
+          "german": "holen",
+          "plural": "er holt",
+          "czech": "přinést",
+          "cz_gender": "m"
+        },
+        {
+          "german": "jung",
+          "plural": "",
+          "czech": "mladý",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Kinderbett",
+          "plural": "-en",
+          "czech": "dětská postýlka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Kommode",
+          "plural": "-n",
+          "czech": "komoda",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Kühlschrank",
+          "plural": "Kühlschränke",
+          "czech": "chladnička, lednička",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Mikrowelle",
+          "plural": "-n",
+          "czech": "mikrovlnná trouba",
+          "cz_gender": "f"
+        },
+        {
+          "german": "modern",
+          "plural": "",
+          "czech": "moderní",
+          "cz_gender": "m"
+        },
+        {
+          "german": "normalerweise",
+          "plural": "",
+          "czech": "normálně, obvykle",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Panik",
+          "plural": "(j. č.)",
+          "czech": "panika",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Paradies",
+          "plural": "-e",
+          "czech": "ráj",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Regal",
+          "plural": "-e",
+          "czech": "police",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Schreibtisch",
+          "plural": "-e",
+          "czech": "psací stůl",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Sessel",
+          "plural": "-",
+          "czech": "křeslo",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Sofa",
+          "plural": "-s",
+          "czech": "pohovka",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Teppich",
+          "plural": "-e",
+          "czech": "koberec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "vorher",
+          "plural": "",
+          "czech": "předtím, před",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Waschbecken",
+          "plural": "-",
+          "czech": "umyvadlo",
+          "cz_gender": "n"
+        },
+        {
+          "german": "waschen",
+          "plural": "er wäscht",
+          "czech": "mýt; prát",
+          "cz_gender": "m"
+        },
+        {
+          "german": "Ich muss meine Hände waschen.",
+          "plural": "-",
+          "czech": "Musím si umýt ruce.",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Waschmaschine",
+          "plural": "-n",
+          "czech": "pračka",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 124,
+      "words": [
+        {
+          "german": "hängen",
+          "plural": "er hängt",
+          "czech": "viset; pověsit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "hinter",
+          "plural": "",
+          "czech": "za",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Kleiderschrank",
+          "plural": "Kleiderschränke",
+          "czech": "šatní skříň",
+          "cz_gender": "f"
+        },
+        {
+          "german": "legen",
+          "plural": "er legt",
+          "czech": "položit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Poster",
+          "plural": "-",
+          "czech": "plakát",
+          "cz_gender": "m"
+        },
+        {
+          "german": "setzen",
+          "plural": "er setzt",
+          "czech": "posadit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "stellen",
+          "plural": "er stellt",
+          "czech": "postavit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "über",
+          "plural": "",
+          "czech": "nad",
+          "cz_gender": "m"
+        },
+        {
+          "german": "unter",
+          "plural": "",
+          "czech": "pod",
+          "cz_gender": "m"
+        },
+        {
+          "german": "zwischen",
+          "plural": "",
+          "czech": "mezi",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 125,
+      "words": [
+        {
+          "german": "dunkel",
+          "plural": "",
+          "czech": "tmavý",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Geige",
+          "plural": "-n",
+          "czech": "housle",
+          "cz_gender": "pl"
+        },
+        {
+          "german": "unbequem",
+          "plural": "",
+          "czech": "nepohodlný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ungemütlich",
+          "plural": "",
+          "czech": "neútulný, nepříjemný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "unmodern",
+          "plural": "",
+          "czech": "nemoderní",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Boden",
+          "plural": "",
+          "czech": "podlaha",
+          "cz_gender": "f"
+        }
+      ]
+    }
+  ]
+},
+{
+  "number": 10,
+  "name": "Lektion 10",
+  "pages": [
+    {
+      "number": 131,
+      "words": [
+        {
+          "german": "der Sommer",
+          "plural": "-",
+          "czech": "léto",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Winter",
+          "plural": "-",
+          "czech": "zima",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 132,
+      "words": [
+        {
+          "german": "der Berg",
+          "plural": "-e",
+          "czech": "hora",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Bundesland",
+          "plural": "Bundesländer",
+          "czech": "spolková země",
+          "cz_gender": "n"
+        },
+        {
+          "german": "geschlossen",
+          "plural": "",
+          "czech": "zavřený",
+          "cz_gender": "m"
+        },
+        {
+          "german": "gestern",
+          "plural": "",
+          "czech": "včera",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Grundschule",
+          "plural": "-n",
+          "czech": "základní škola",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Laune",
+          "plural": "-n",
+          "czech": "nálada",
+          "cz_gender": "f"
+        },
+        {
+          "german": "morgen",
+          "plural": "",
+          "czech": "zítra",
+          "cz_gender": "m"
+        },
+        {
+          "german": "nervös",
+          "plural": "",
+          "czech": "nervózní",
+          "cz_gender": "m"
+        },
+        {
+          "german": "prima",
+          "plural": "",
+          "czech": "prima",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Spaß",
+          "plural": "Späße",
+          "czech": "zábava, legrace",
+          "cz_gender": "m"
+        },
+        {
+          "german": "traurig",
+          "plural": "",
+          "czech": "smutný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "übermorgen",
+          "plural": "",
+          "czech": "pozítří",
+          "cz_gender": "m"
+        },
+        {
+          "german": "virtuell",
+          "plural": "",
+          "czech": "virtuálně",
+          "cz_gender": "m"
+        },
+        {
+          "german": "vorgestern",
+          "plural": "",
+          "czech": "předevčírem",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 133,
+      "words": [
+        {
+          "german": "die Amtssprache",
+          "plural": "-n",
+          "czech": "úřední jazyk",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der größte See",
+          "plural": "",
+          "czech": "největší jezero",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der höchste Berg",
+          "plural": "",
+          "czech": "nejvyšší hora",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der längste Fluss",
+          "plural": "",
+          "czech": "nejdelší řeka",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Einwohnerzahl",
+          "plural": "-en",
+          "czech": "počet obyvatel",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Fläche",
+          "plural": "-n",
+          "czech": "plocha",
+          "cz_gender": "f"
+        },
+        {
+          "german": "grenzen",
+          "plural": "er grenzt + an (+ 4. p.)",
+          "czech": "hraničit, sousedit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Hauptstadt",
+          "plural": "Hauptstädte",
+          "czech": "hlavní město",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Internet-TLD",
+          "plural": "-s",
+          "czech": "internetová doména nejvyššího řádu",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Kfz = Kraftfahrzeug",
+          "plural": "-e",
+          "czech": "automobil",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Kfz-Kennzeichen",
+          "plural": "-",
+          "czech": "SPZ, registrační značka",
+          "cz_gender": "n"
+        },
+        {
+          "german": "km² = (der) Quadratkilometer",
+          "plural": "-",
+          "czech": "kilometr čtvereční",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Lage",
+          "plural": "-n",
+          "czech": "poloha",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Mitteleuropa",
+          "plural": "",
+          "czech": "střední Evropa",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Norden",
+          "plural": "(im Norden)",
+          "czech": "sever (na severu)",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Osten",
+          "plural": "(im Osten)",
+          "czech": "východ (na východě)",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Telefonvorwahl",
+          "plural": "-en",
+          "czech": "telefonní předvolba",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Süden",
+          "plural": "(im Süden)",
+          "czech": "jih (na jihu)",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Währung",
+          "plural": "-en",
+          "czech": "měna",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Wappen",
+          "plural": "-",
+          "czech": "erb",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Westen",
+          "plural": "(im Westen)",
+          "czech": "západ (na západě)",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 134,
+      "words": [
+        {
+          "german": "der Anfang",
+          "plural": "Anfänge",
+          "czech": "začátek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "am Anfang",
+          "plural": "",
+          "czech": "na začátku",
+          "cz_gender": "m"
+        },
+        {
+          "german": "(sich) an|schauen",
+          "plural": "er schaut sich an",
+          "czech": "prohlédnout si",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Fan",
+          "plural": "-s",
+          "czech": "fanoušek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "früher",
+          "plural": "",
+          "czech": "dříve",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Glück",
+          "plural": "(j. č.)",
+          "czech": "štěstí",
+          "cz_gender": "n"
+        },
+        {
+          "german": "zum Glück",
+          "plural": "",
+          "czech": "naštěstí",
+          "cz_gender": "m"
+        },
+        {
+          "german": "letzter, letzte, letztes",
+          "plural": "",
+          "czech": "poslední",
+          "cz_gender": "m"
+        },
+        {
+          "german": "passieren",
+          "plural": "er passiert",
+          "czech": "stát se, přihodit se",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Quiz",
+          "plural": "-",
+          "czech": "kvíz",
+          "cz_gender": "n"
+        },
+        {
+          "german": "schaffen",
+          "plural": "er schafft",
+          "czech": "stihnout, zvládnout",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Sehenswürdigkeit",
+          "plural": "-en",
+          "czech": "pamětihodnost",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Taxifahrer",
+          "plural": "-",
+          "czech": "taxikář",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 135,
+      "words": [
+        {
+          "german": "das Angebot",
+          "plural": "-e",
+          "czech": "nabídka",
+          "cz_gender": "n"
+        },
+        {
+          "german": "die Erholung",
+          "plural": "(j. č.)",
+          "czech": "odpočinek, zotavení",
+          "cz_gender": "f"
+        },
+        {
+          "german": "erleben",
+          "plural": "er erlebt",
+          "czech": "zažít",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Ermäßigung",
+          "plural": "-en",
+          "czech": "sleva",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Experte",
+          "plural": "-n",
+          "czech": "expert",
+          "cz_gender": "m"
+        },
+        {
+          "german": "gelten",
+          "plural": "er gilt",
+          "czech": "platit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Infostand",
+          "plural": "Infostände",
+          "czech": "infostánek",
+          "cz_gender": "m"
+        },
+        {
+          "german": "nötig",
+          "plural": "",
+          "czech": "nutný, potřebný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "schließlich",
+          "plural": "",
+          "czech": "nakonec, konečně",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Schlittschuh",
+          "plural": "-e",
+          "czech": "brusle",
+          "cz_gender": "m"
+        },
+        {
+          "german": "Schlittschuh laufen",
+          "plural": "er läuft Schlittschuh",
+          "czech": "bruslit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "sparen",
+          "plural": "er spart",
+          "czech": "šetřit, spořit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "später",
+          "plural": "",
+          "czech": "později",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Symbol",
+          "plural": "-e",
+          "czech": "symbol",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Traum",
+          "plural": "Träume",
+          "czech": "sen",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Turm",
+          "plural": "Türme",
+          "czech": "věž",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Voranmeldung",
+          "plural": "-en",
+          "czech": "předběžné přihlášení",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 136,
+      "words": [
+        {
+          "german": "berg|steigen",
+          "plural": "er steigt berg",
+          "czech": "chodit po horách, věnovat se horolezectví",
+          "cz_gender": "m"
+        },
+        {
+          "german": "billiger",
+          "plural": "",
+          "czech": "levnější",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Bodensee",
+          "plural": "",
+          "czech": "Bodamské jezero",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der beste Tag",
+          "plural": "",
+          "czech": "nejlepší den",
+          "cz_gender": "m"
+        },
+        {
+          "german": "lieber",
+          "plural": "",
+          "czech": "raději",
+          "cz_gender": "m"
+        },
+        {
+          "german": "endlich",
+          "plural": "",
+          "czech": "konečně, nakonec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "fliegen",
+          "plural": "er fliegt",
+          "czech": "letět",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Flugzeug",
+          "plural": "-e",
+          "czech": "letadlo",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Germknödel",
+          "plural": "-",
+          "czech": "velký kynutý knedlík, plněný povidly",
+          "cz_gender": "m"
+        },
+        {
+          "german": "klappen",
+          "plural": "es klappt",
+          "czech": "klapnout, vyjít, podařit se",
+          "cz_gender": "m"
+        },
+        {
+          "german": "planen",
+          "plural": "er plant",
+          "czech": "plánovat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Postkarte",
+          "plural": "-n",
+          "czech": "pohlednice",
+          "cz_gender": "f"
+        },
+        {
+          "german": "verlieren",
+          "plural": "er verliert",
+          "czech": "ztratit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "verschlafen",
+          "plural": "er verschläft",
+          "czech": "zaspat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Verspätung",
+          "plural": "-en",
+          "czech": "zpoždění",
+          "cz_gender": "f"
+        }
+      ]
+    },
+    {
+      "number": 138,
+      "words": [
+        {
+          "german": "aus|ruhen",
+          "plural": "er ruht aus",
+          "czech": "odpočinout si",
+          "cz_gender": "m"
+        },
+        {
+          "german": "baden",
+          "plural": "er badet",
+          "czech": "koupat se",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Beachvolleyball",
+          "plural": "",
+          "czech": "plážový volejbal",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Bergsicht",
+          "plural": "-en",
+          "czech": "výhled na hory",
+          "cz_gender": "f"
+        },
+        {
+          "german": "das Bobfahren",
+          "plural": "",
+          "czech": "jízda na bobech",
+          "cz_gender": "n"
+        },
+        {
+          "german": "der Campingplatz",
+          "plural": "Campingplätze",
+          "czech": "kemp",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Eishockey",
+          "plural": "",
+          "czech": "lední hokej",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Eislaufen",
+          "plural": "",
+          "czech": "bruslení",
+          "cz_gender": "n"
+        },
+        {
+          "german": "eis|laufen",
+          "plural": "er läuft eis",
+          "czech": "bruslit",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Ferien",
+          "plural": "(mn. č.)",
+          "czech": "prázdniny",
+          "cz_gender": "pl"
+        },
+        {
+          "german": "gratis",
+          "plural": "",
+          "czech": "zdarma",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ideal",
+          "plural": "",
+          "czech": "ideální",
+          "cz_gender": "m"
+        },
+        {
+          "german": "klettern",
+          "plural": "er klettert",
+          "czech": "stoupat, lézt, šplhat na vrchol",
+          "cz_gender": "m"
+        },
+        {
+          "german": "Langlauf machen",
+          "plural": "er macht Langlauf",
+          "czech": "jezdit na běžkách",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Liebhaber",
+          "plural": "-",
+          "czech": "milovník, nadšenec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Natur",
+          "plural": "(j. č.)",
+          "czech": "příroda",
+          "cz_gender": "f"
+        },
+        {
+          "german": "die Rodelbahn",
+          "plural": "-en",
+          "czech": "sáňkařská dráha",
+          "cz_gender": "f"
+        },
+        {
+          "german": "rodeln",
+          "plural": "er rodelt",
+          "czech": "sáňkovat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ruhig",
+          "plural": "",
+          "czech": "tichý, klidný",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Schneemann",
+          "plural": "Schneemänner",
+          "czech": "sněhulák",
+          "cz_gender": "m"
+        },
+        {
+          "german": "einen Schneemann bauen",
+          "plural": "",
+          "czech": "stavět sněhuláka",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Ski",
+          "plural": "-",
+          "czech": "lyže",
+          "cz_gender": "m"
+        },
+        {
+          "german": "Ski fahren",
+          "plural": "er fährt Ski",
+          "czech": "lyžovat",
+          "cz_gender": "m"
+        },
+        {
+          "german": "das Skigebiet",
+          "plural": "-e",
+          "czech": "lyžařský areál",
+          "cz_gender": "n"
+        },
+        {
+          "german": "das Snowboard",
+          "plural": "-s",
+          "czech": "snowboard",
+          "cz_gender": "n"
+        },
+        {
+          "german": "Snowboard fahren",
+          "plural": "er fährt Snowboard",
+          "czech": "jezdit na snowboardu",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Sportler",
+          "plural": "-",
+          "czech": "sportovec",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Urlaub",
+          "plural": "-e",
+          "czech": "dovolená",
+          "cz_gender": "m"
+        },
+        {
+          "german": "wählen",
+          "plural": "er wählt",
+          "czech": "volit",
+          "cz_gender": "m"
+        }
+      ]
+    },
+    {
+      "number": 139,
+      "words": [
+        {
+          "german": "deswegen",
+          "plural": "",
+          "czech": "proto",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Olympiahalle",
+          "plural": "-n",
+          "czech": "olympijská hala",
+          "cz_gender": "f"
+        },
+        {
+          "german": "der Olympionike",
+          "plural": "-n",
+          "czech": "olympionik",
+          "cz_gender": "m"
+        },
+        {
+          "german": "der Schnee",
+          "plural": "",
+          "czech": "sníh",
+          "cz_gender": "m"
+        },
+        {
+          "german": "die Sportart",
+          "plural": "-en",
+          "czech": "(sportovní) disciplína",
+          "cz_gender": "f"
+        },
+        {
+          "german": "überall",
+          "plural": "",
+          "czech": "všude",
+          "cz_gender": "m"
+        },
+        {
+          "german": "ungefähr",
+          "plural": "",
+          "czech": "asi, přibližně",
+          "cz_gender": "m"
+        }
+      ]
+    }
+  ]
+}
   ]
 }
