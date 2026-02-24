@@ -29,7 +29,7 @@
     /* Snake Target Glow Colors (New) */
     --snake-target: #fbbf24;                    /* Amber 400 */
     --snake-target-glow: rgba(251, 191, 36, 0.5); 
-    --snake-target-bg: rgba(251, 191, 36, 0.7);   
+    --snake-target-bg: rgba(190, 23, 23, 0.7);   
     --snake-target-grad: rgba(251, 191, 36, 0.4); 
     --snake-tag-bg: rgba(15, 23, 42, 0.95);     }
 
@@ -656,6 +656,8 @@ input:checked + .slider:before { transform: translateX(20px); }
     justify-content: center;
     align-items: center;
     z-index: 30;
+    background-color: var(--snake-target-bg);
+    border-radius: 4px;
 }
 
 /* --- THE GOLDEN BLOCK (No Glow, Just Gold) --- */
