@@ -299,11 +299,118 @@ class GameManager {
     }
 
     // --- UI CREATORS ---
+    // 1. The Container Builder (As requested)
     _createSnakeUI() {
         const container = document.createElement('div');
         container.className = 'snake-game-container';
-        container.innerHTML = `<div class="snake-header"><div class="snake-stats"><div><div>Punkte</div><span id="snakeScore">0</span></div><div><div>Tempo</div><span id="snakeSpeed">1.0x</span></div><div><div>Rekord</div><span id="snakeHigh">0</span></div></div><div class="snake-word-display"><div class="snake-word-label">Ziel</div><h2 class="snake-target-word" id="snakeTarget">Snake Deutsch</h2></div></div><div class="snake-game-area"><div class="snake-grid-background"></div><div class="snake-overlay"><h2>Snake Deutsch</h2><p>Sammle die richtigen Übersetzungen.</p><button class="snake-btn">Start</button></div></div>`;
-        return { container, gameArea: container.querySelector('.snake-game-area'), gridBackground: container.querySelector('.snake-grid-background'), scoreEl: container.querySelector('#snakeScore'), highScoreEl: container.querySelector('#snakeHigh'), targetWordEl: container.querySelector('#snakeTarget'), overlay: container.querySelector('.snake-overlay'), overlayTitle: container.querySelector('.snake-overlay h2'), overlayBtn: container.querySelector('.snake-btn'), speedEl: container.querySelector('#snakeSpeed') };
+        container.innerHTML = `
+            <div class="snake-header">
+                <div class="snake-stats">
+                    <div><div>Punkte</div><span id="snakeScore">0</span></div>
+                    <div><div>Tempo</div><span id="snakeSpeed">1.0x</span></div>
+                    <div><div>Rekord</div><span id="snakeHigh">0</span></div>
+                </div>
+                <div class="snake-word-display">
+                    <div class="snake-word-label">Ziel</div>
+                    <h2 class="snake-target-word" id="snakeTarget">Snake Deutsch</h2>
+                </div>
+            </div>
+            <div class="snake-game-area">
+                <div class="snake-grid-background"></div>
+                <div class="snake-overlay">
+                    <h2>Snake Deutsch</h2>
+                    <p>Sammle die richtigen Übersetzungen.</p>
+                    <button class="snake-btn">Start</button>
+                </div>
+            </div>
+        `;
+        return {
+            container,
+            gameArea: container.querySelector('.snake-game-area'),
+            gridBackground: container.querySelector('.snake-grid-background'),
+            scoreEl: container.querySelector('#snakeScore'),
+            highScoreEl: container.querySelector('#snakeHigh'),
+            targetWordEl: container.querySelector('#snakeTarget'),
+            overlay: container.querySelector('.snake-overlay'),
+            overlayTitle: container.querySelector('.snake-overlay h2'),
+            overlayBtn: container.querySelector('.snake-btn'),
+            speedEl: container.querySelector('#snakeSpeed')
+        };
+    }
+
+    // 2. "Fancy Math" Word Spawner
+    // CALL THIS INSTEAD OF document.createElement('div') when making food
+    // x and y are grid coordinates (0-15)
+    _createWordItem(word, x, y) {
+        const item = document.createElement('div');
+        item.className = 'snake-word-item';
+        
+        // Position on 16x16 grid
+        item.style.left = `${x * 6.25}%`;
+        item.style.top = `${y * 6.25}%`;
+
+        // Determine Text Alignment based on Wall Proximity
+        // If x is 0 or 1, align Left. If x is 14 or 15, align Right. Else Center.
+        let alignClass = 'align-center';
+        if (x <= 1) alignClass = 'align-left';
+        if (x >= 14) alignClass = 'align-right';
+
+        // Set HTML with separated visual box and smart label wrapper
+        item.innerHTML = `
+            <div class="snake-visual-box"></div>
+            <div class="snake-label-wrapper ${alignClass}">
+                <span class="snake-word-tag">${word}</span>
+            </div>
+        `;
+        
+        return item;
+    }
+
+    // 3. Collision Logic helper (Optional use)
+    // Ensures words aren't spawned on snake OR too close to other words
+    _getValidSpawn(snakeSegments, existingItems = []) {
+        let x, y, valid, tooClose;
+        let attempts = 0;
+        
+        do {
+            valid = true;
+            tooClose = false;
+            x = Math.floor(Math.random() * 16);
+            y = Math.floor(Math.random() * 16);
+
+            // 1. Check Snake Collision
+            for (let seg of snakeSegments) {
+                if (seg.x === x && seg.y === y) {
+                    valid = false;
+                    break;
+                }
+            }
+
+            // 2. Check Overlap with Existing Words (Manhattan Distance)
+            // Ensure words are at least 3 blocks apart horizontally/vertically to prevent text overlap
+            if (valid && existingItems.length > 0) {
+                for (let item of existingItems) {
+                    // Assuming item has .x and .y properties stored
+                    const dx = Math.abs(item.x - x);
+                    const dy = Math.abs(item.y - y);
+                    
+                    // If within 2 blocks horizontally or 1 block vertically, it's too close
+                    if (dx < 3 && dy < 2) {
+                        tooClose = true;
+                        break;
+                    }
+                }
+            }
+
+            if (tooClose) valid = false;
+            attempts++;
+            
+            // Safety break to prevent infinite loops if grid is full
+            if (attempts > 100) break; 
+
+        } while (!valid);
+
+        return { x, y };
     }
 
     _createFlashcardsUI() {

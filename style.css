@@ -27,12 +27,11 @@
     --snake-body-2: #059669;
 
     /* Snake Target Glow Colors (New) */
-    --snake-target: #fbbf24;                    /* Amber 400 - Main Color */
-    --snake-target-glow: rgba(251, 191, 36, 0.5); /* Outer Glow */
-    --snake-target-bg: rgba(251, 191, 36, 0.1);   /* Inner Box Fill */
-    --snake-target-grad: rgba(251, 191, 36, 0.4); /* Gradient Arm Strength */
-    --snake-tag-bg: rgba(15, 23, 42, 0.95);       /* Text Label Background */
-}
+    --snake-target: #fbbf24;                    /* Amber 400 */
+    --snake-target-glow: rgba(251, 191, 36, 0.5); 
+    --snake-target-bg: rgba(251, 191, 36, 0.1);   
+    --snake-target-grad: rgba(251, 191, 36, 0.4); 
+    --snake-tag-bg: rgba(15, 23, 42, 0.95);     }
 
 * {
     box-sizing: border-box;
@@ -569,7 +568,7 @@ input:checked + .slider:before { transform: translateX(20px); }
 .typing-input:focus { border-color: var(--secondary); box-shadow: 0 0 20px rgba(0, 206, 201, 0.3); }
 .feedback-msg { min-height: 2rem; font-weight: bold; margin-bottom: 1rem; }
 
-/* --- SNAKE GAME (Enhanced) --- */
+/* --- SNAKE GAME CONTAINER --- */
 .snake-game-container {
     width: 100%;
     max-width: 600px;
@@ -621,6 +620,7 @@ input:checked + .slider:before { transform: translateX(20px); }
     line-height: 1.1;
 }
 
+/* --- GAME BOARD --- */
 .snake-game-area {
     position: relative;
     border-radius: 0.75rem;
@@ -630,10 +630,9 @@ input:checked + .slider:before { transform: translateX(20px); }
     width: 100%;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
-    touch-action: none; /* Stops scroll */
+    touch-action: none;
 }
 
-/* Grid Background */
 .snake-grid-background {
     position: absolute;
     inset: 0;
@@ -647,11 +646,102 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 .snake-grid-cell { border: 1px solid rgba(255, 255, 255, 0.03); }
 
-/* Snake Segments */
+/* --- THE WORD ITEM (The 1x1 Hitbox) --- */
+.snake-word-item {
+    position: absolute;
+    width: 6.25%; /* 100% / 16 grid size */
+    height: 6.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    /* Do NOT style this box, style the .snake-visual-box */
+}
+
+/* --- THE GLOWING SQUARE (Visuals) --- */
+.snake-visual-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--snake-target-bg);
+    box-shadow: inset 0 0 0 2px var(--snake-target), 0 0 15px var(--snake-target-glow);
+    z-index: 1;
+}
+/* Gradient Arms */
+.snake-visual-box::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 300%; height: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
+    pointer-events: none;
+}
+.snake-visual-box::after {
+    content: ''; position: absolute; top: -100%; left: 0; height: 300%; width: 100%;
+    background: linear-gradient(180deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
+    pointer-events: none;
+}
+
+/* --- THE FLOATING TEXT (Smart Positioning) --- */
+.snake-label-wrapper {
+    position: absolute;
+    bottom: 140%; /* Distance above the square */
+    width: 0; 
+    height: 0; 
+    overflow: visible;
+    display: flex;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+/* Default: Center Aligned */
+.snake-label-wrapper.align-center {
+    left: 50%;
+    justify-content: center;
+}
+.snake-label-wrapper.align-center .snake-word-tag {
+    transform: translateX(-50%);
+}
+
+/* Left Edge: Push Right */
+.snake-label-wrapper.align-left {
+    left: 0;
+    justify-content: flex-start;
+}
+.snake-label-wrapper.align-left .snake-word-tag {
+    transform: translateX(-10%); /* Slight nudge */
+}
+
+/* Right Edge: Push Left */
+.snake-label-wrapper.align-right {
+    right: 0;
+    justify-content: flex-end;
+}
+.snake-label-wrapper.align-right .snake-word-tag {
+    transform: translateX(10%); /* Slight nudge */
+}
+
+/* --- THE ACTUAL TEXT PILL --- */
+.snake-word-tag {
+    width: max-content; /* Force fit text */
+    min-width: 60px;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--snake-tag-bg);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 2px solid var(--snake-target);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    /* Reset global text wrap */
+    overflow-wrap: normal;
+    word-wrap: normal;
+}
+
+/* --- SNAKE PARTS --- */
 .snake-segment {
     position: absolute;
-    width: 6.25%; /* 100/16 */
-    height: 6.25%;
+    width: 6.25%; height: 6.25%;
     border-radius: 20%;
     transition: all 0.1s linear;
     z-index: 20;
@@ -665,110 +755,22 @@ input:checked + .slider:before { transform: translateX(20px); }
 .snake-body-even { background-color: var(--snake-body-1); }
 .snake-body-odd { background-color: var(--snake-body-2); }
 
-/* Snake Word Target with Crosshair Gradient */
-.snake-word-item {
-    position: absolute;
-    width: 6.25%;
-    height: 6.25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 30;
-    box-shadow: inset 0 0 0 2px var(--snake-target), 0 0 15px var(--snake-target-glow);
-    background: var(--snake-target-bg);
-    border-radius: 4px;
-}
-
-/* Horizontal Gradient Arms */
-.snake-word-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(90deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
-    pointer-events: none;
-}
-/* Vertical Gradient Arms */
-.snake-word-item::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    height: 300%;
-    width: 100%;
-    z-index: -1;
-    background: linear-gradient(180deg, transparent 0%, var(--snake-target-grad) 45%, var(--snake-target-grad) 55%, transparent 100%);
-    pointer-events: none;
-}
-
-/* Floating Text Label above Target */
-.snake-word-tag {
-    position: absolute;
-    /* Pushes text higher up so it doesn't overlap the glow */
-    bottom: 140%; 
-    left: 50%;
-    transform: translateX(-50%);
-    
-    background-color: var(--snake-tag-bg);
-    /* Increased padding to fix the "shrunk" look */
-    padding: 8px 14px; 
-    border-radius: 8px;
-    
-    /* Bigger, readable font size */
-    font-size: clamp(14px, 2.5vw, 18px); 
-    font-weight: 800; /* Extra bold for readability */
-    color: #fff;
-    
-    /* Fixes vertical alignment */
-    line-height: 1.2; 
-    
-    border: 2px solid var(--snake-target); /* Slightly thicker border */
-    white-space: nowrap;
-    z-index: 40;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6); /* Stronger shadow for contrast */
-    pointer-events: none;
-    height: auto; /* Allow height to adjust based on content */
-    
-    /* Ensure the box has a minimum width so short words look good */
-    min-width: 40px; 
-    text-align: center;
-}
-
+/* --- OVERLAY --- */
 .snake-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px);
-    padding: 1rem;
-    text-align: center;
+    position: absolute; inset: 0; z-index: 200;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(4px);
+    padding: 1rem; text-align: center;
 }
 .snake-overlay h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; margin-top: 0; }
 .snake-overlay p { color: #d6d3d1; margin-bottom: 1rem; max-width: 28rem; font-size: 0.9rem; }
-.snake-warning-text { color: #f87171; }
-
 .snake-btn {
-    border-radius: 9999px;
-    background-color: var(--accent);
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.5);
+    border-radius: 9999px; background-color: var(--accent); padding: 0.6rem 1.5rem;
+    font-size: 1rem; font-weight: bold; color: white; border: none; cursor: pointer;
+    transition: all 0.2s; box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.5);
 }
 .snake-btn:hover { background-color: var(--secondary); transform: scale(1.05); }
 .snake-footer { margin-top: 0.5rem; font-size: 0.7rem; color: var(--text-muted); text-align: center; line-height: 1.3; }
-
 /* Sentence Builder */
 .sentence-container { text-align: center; max-width: 700px; width: 100%; display: flex; flex-direction: column; gap: 1.5rem; }
 .sentence-prompt {
