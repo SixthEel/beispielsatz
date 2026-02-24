@@ -236,6 +236,13 @@
       "name": "Lektion 6",
       "pages": [
         {
+          "number": 74,
+          "words": [
+            { "german": "die Freizeitaktivität", "plural": "-en", "czech": "volnočasová aktivita", "example": "", "cz_gender": "f" },
+            { "german": "die Morgenroutine", "plural": "-n", "czech": "ranní rutina", "example": "", "cz_gender": "f" }
+          ]
+        },
+        {
           "number": 75,
           "words": [
             { "german": "jobben", "plural": "-", "czech": "mít brigádu", "example": "" },
