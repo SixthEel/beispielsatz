@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LernDeutsch - German Learning Suite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="app-header glass-panel">
+            <div class="logo">
+                <h1>Lern<span>Deutsch</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-view="learn">
+                    <span class="icon">📚</span> Lernen
+                </button>
+                <button class="nav-btn" data-view="games">
+                    <span class="icon">🎮</span> Spiele
+                </button>
+                <button class="nav-btn" data-view="stats">
+                    <span class="icon">📊</span> Statistik
+                </button>
+            </nav>
+        </header>
+
+        <main class="app-content">
+            <!-- Selector Bar -->
+            <section class="selection-bar glass-panel flow-row">
+                <div class="selector-group">
+                    <label>Lektionen (Mehrfachauswahl)</label>
+                    <div class="multiselect" id="lessonMultiselect">
+                        <div class="selectBox">
+                            <select>
+                                <option>Lektionen wählen...</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes-lessons" class="checkboxes">
+                            <!-- JS Generated -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selector-group">
+                    <label>Seiten (Mehrfachauswahl)</label>
+                    <div class="multiselect" id="pageMultiselect">
+                        <div class="selectBox">
+                            <select>
+                                <option>Seiten wählen...</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes-pages" class="checkboxes">
+                            <!-- JS Generated -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selector-group toggle-group">
+                    <label>Sprachmodus</label>
+                    <div class="mode-toggle">
+                        <span class="mode-label">CZ ➔ DE</span>
+                        <label class="switch">
+                            <input type="checkbox" id="reverseModeToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="mode-label">DE ➔ CZ</span>
+                    </div>
+                </div>
+
+                <div class="stats-display-group">
+                    <div class="stats-display">
+                        <span id="wordCountBadge">0 Wörter</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Learn -->
+            <section id="view-learn" class="view-section active">
+                <div class="word-grid" id="wordListContainer">
+                    <div class="empty-state glass-panel">
+                        <h2>Willkommen!</h2>
+                        <p>Wähle oben Lektionen und Seiten aus, um Vokabeln anzuzeigen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- View: Games -->
+            <section id="view-games" class="view-section hidden">
+                <div class="games-grid">
+                    <div class="game-card glass-panel" data-game="flashcards">
+                        <div class="game-icon">🎴</div>
+                        <h3>Karteikarten</h3>
+                        <p>Klassisches Vokabeltraining.</p>
+                    </div>
+                    <div class="game-card glass-panel" data-game="quiz">
+                        <div class="game-icon">❓</div>
+                        <h3>Quiz</h3>
+                        <p>Multiple-Choice Herausforderung.</p>
+                    </div>
+                    <div class="game-card glass-panel" data-game="memory">
+                        <div class="game-icon">🧩</div>
+                        <h3>Memory</h3>
+                        <p>Finde die Paare (Solo nebo 1vs1).</p>
+                    </div>
+                    <div class="game-card glass-panel" data-game="typing">
+                        <div class="game-icon">⌨️</div>
+                        <h3>Schreiben</h3>
+                        <p>Tippe die korrekte Übersetzung.</p>
+                    </div>
+                    <div class="game-card glass-panel" data-game="snake">
+                        <div class="game-icon">🐍</div>
+                        <h3>Wörterschlange</h3>
+                        <p>Sammle die Wörter (Vylepšené).</p>
+                    </div>
+                    <div class="game-card glass-panel" data-game="sentences">
+                        <div class="game-icon">🏗️</div>
+                        <h3>Satzbildung</h3>
+                        <p>Bilde grammatikalisch korrekte Sätze.</p>
+                    </div>
+                </div>
+
+                <div id="activeGameContainer" class="glass-panel hidden">
+                    <div class="game-header-controls">
+                        <button class="back-btn">← Zurück</button>
+                        <div class="game-header-right">
+                            <button class="plural-toggle-btn" id="pluralToggleBtn" title="Plural-Modus">Plural: Aus</button>
+                            <button class="restart-btn">↻ Neustart</button>
+                        </div>
+                    </div>
+                    <div id="gameViewport"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="games.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
