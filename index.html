@@ -37,7 +37,6 @@
         <main class="app-content">
             <!-- Selector Bar -->
             <section class="selection-bar glass-panel flow-row">
-                <!-- Multi-select pro Lekce -->
                 <div class="selector-group">
                     <label>Lektionen (Mehrfachauswahl)</label>
                     <div class="multiselect" id="lessonMultiselect">
@@ -48,12 +47,11 @@
                             <div class="overSelect"></div>
                         </div>
                         <div id="checkboxes-lessons" class="checkboxes">
-                            <!-- Checkboxy se vygenerují přes JS -->
+                            <!-- JS Generated -->
                         </div>
                     </div>
                 </div>
 
-                <!-- Multi-select pro Stránky -->
                 <div class="selector-group">
                     <label>Seiten (Mehrfachauswahl)</label>
                     <div class="multiselect" id="pageMultiselect">
@@ -64,12 +62,11 @@
                             <div class="overSelect"></div>
                         </div>
                         <div id="checkboxes-pages" class="checkboxes">
-                            <!-- Checkboxy se vygenerují přes JS -->
+                            <!-- JS Generated -->
                         </div>
                     </div>
                 </div>
 
-                <!-- Přepínač módů -->
                 <div class="selector-group toggle-group">
                     <label>Sprachmodus</label>
                     <div class="mode-toggle">
@@ -82,15 +79,16 @@
                     </div>
                 </div>
 
-                <div class="stats-display">
-                    <span id="wordCountBadge">0 Wörter</span>
+                <div class="stats-display-group">
+                    <div class="stats-display">
+                        <span id="wordCountBadge">0 Wörter</span>
+                    </div>
                 </div>
             </section>
 
-            <!-- View: Learn (Word List) -->
+            <!-- View: Learn -->
             <section id="view-learn" class="view-section active">
                 <div class="word-grid" id="wordListContainer">
-                    <!-- Words will be injected here -->
                     <div class="empty-state glass-panel">
                         <h2>Willkommen!</h2>
                         <p>Wähle oben Lektionen und Seiten aus, um Vokabeln anzuzeigen.</p>
@@ -103,50 +101,46 @@
                 <div class="games-grid">
                     <div class="game-card glass-panel" data-game="flashcards">
                         <div class="game-icon">🎴</div>
-                        <h3>Karteikarten</h3>
-                        <p>Klassisches Vokabeltraining.</p>
+                        <h3>Karten</h3>
+                        <p>Vokabel training</p>
                     </div>
                     <div class="game-card glass-panel" data-game="quiz">
                         <div class="game-icon">❓</div>
                         <h3>Quiz</h3>
-                        <p>Multiple-Choice Herausforderung.</p>
+                        <p>Finde die richtige Variante.</p>
                     </div>
                     <div class="game-card glass-panel" data-game="memory">
                         <div class="game-icon">🧩</div>
                         <h3>Memory</h3>
-                        <p>Finde die passenden Paare.</p>
                     </div>
                     <div class="game-card glass-panel" data-game="typing">
                         <div class="game-icon">⌨️</div>
                         <h3>Schreiben</h3>
-                        <p>Tippe die korrekte Übersetzung.</p>
+                        <p>Schreib das richtige Wort.</p>
                     </div>
                     <div class="game-card glass-panel" data-game="snake">
                         <div class="game-icon">🐍</div>
-                        <h3>WörterSchalnge</h3>
-                        <p>Sammle die richtigen Wörter.</p>
+                        <h3>Schlangen Spiel</h3>
                     </div>
                     <div class="game-card glass-panel" data-game="sentences">
                         <div class="game-icon">🏗️</div>
-                        <h3>Satzbuildung</h3>
-                        <p>Bilde grammatikalisch korrekte Sätze.</p>
+                        <h3>Satzbildung</h3>
                     </div>
                 </div>
 
                 <div id="activeGameContainer" class="glass-panel hidden">
-                    <!-- Navigace ve hře -->
                     <div class="game-header-controls">
                         <button class="back-btn">← Zurück</button>
-                        <button class="restart-btn">↻ Neustart</button>
+                        <div class="game-header-right">
+                            <button class="plural-toggle-btn" id="pluralToggleBtn" title="Plural-Modus">Plural: Aus</button>
+                            <button class="restart-btn">↻ Neustart</button>
+                        </div>
                     </div>
-                    
                     <div id="gameViewport"></div>
                 </div>
             </section>
         </main>
     </div>
-
-    <!-- Scripts -->
     <script src="games.js"></script>
     <script src="script.js"></script>
 </body>
