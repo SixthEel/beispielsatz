@@ -658,3 +658,133 @@ input:checked + .slider:before { transform: translateX(20px); }
     letter-spacing: 1.5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* =============================================
+   QUIZ & KARTEN FIXES
+   ============================================= */
+
+/* Zalomení dlouhých textů u Kvízu na mobilu */
+.quiz-option-btn {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.4 !important;
+    padding: 1rem !important;
+}
+
+/* Skládání elementů na kartičkách (Text nahoře, repráček dole) */
+.fc-front, .fc-back {
+    flex-direction: column !important;
+    gap: 15px;
+}
+
+/* Luxusní ikonka reproduktoru na kartičkách */
+.speaker-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    outline: none;
+}
+
+.speaker-btn:hover {
+    background: rgba(16, 185, 129, 0.3);
+    border-color: #10b981;
+    transform: scale(1.1);
+}
+
+/* =============================================
+   LIVE WEIGHTS DEBUG PANEL (SRS)
+   ============================================= */
+#weight-debug-panel {
+    position: fixed;
+    left: 20px;
+    top: 120px;
+    width: 250px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    z-index: 9999;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: slideInLeft 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-150%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+#weight-debug-panel h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #34d399;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+#weight-debug-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+#weight-debug-panel li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    border-bottom: 1px dashed rgba(255,255,255,0.05);
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+#weight-debug-panel li span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    font-family: var(--font-body);
+}
+
+/* Responsivita pro menší monitory a mobily */
+@media (max-width: 1400px) {
+    #weight-debug-panel {
+        left: 10px;
+        top: 80px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    #weight-debug-panel {
+        top: auto;
+        bottom: 20px;
+        left: 10px;
+        width: 180px;
+        max-height: 200px;
+        font-size: 0.75rem;
+        opacity: 0.8; /* Na mobilu trochu průhlednější, ať nepřekáží */
+    }
+    #weight-debug-panel:active {
+        opacity: 1;
+    }
+}
