@@ -1416,6 +1416,108 @@
               "czech": "slovo",
               "example": "",
               "cz_gender": "n"
+            },
+            {
+              "german": "ein bisschen",
+              "plural": "",
+              "czech": "trochu",
+              "example": ""
+            },
+            {
+              "german": "finden",
+              "plural": "er findet",
+              "czech": "shledávat, myslet si",
+              "example": "Sie findet den Kurs super."
+            },
+            {
+              "german": "interessant",
+              "plural": "",
+              "czech": "zajímavý",
+              "example": ""
+            },
+            {
+              "german": "der Kurs",
+              "plural": "-e",
+              "czech": "kurz",
+              "example": ""
+            },
+            {
+              "german": "leider",
+              "plural": "",
+              "czech": "bohužel",
+              "example": ""
+            },
+            {
+              "german": "mein/meine/mein",
+              "plural": "",
+              "czech": "můj/moje/moje",
+              "example": ""
+            },
+            {
+              "german": "der Mensch",
+              "plural": "-en",
+              "czech": "člověk",
+              "example": ""
+            },
+            {
+              "german": "die Mutter",
+              "plural": "Mütter",
+              "czech": "matka",
+              "example": ""
+            },
+            {
+              "german": "noch",
+              "plural": "",
+              "czech": "ještě",
+              "example": ""
+            },
+            {
+              "german": "Portugal",
+              "plural": "",
+              "czech": "Portugalsko",
+              "example": ""
+            },
+            {
+              "german": "das Portugiesisch",
+              "plural": "",
+              "czech": "portugalština, portugalsky",
+              "example": ""
+            },
+            {
+              "german": "Schweden",
+              "plural": "",
+              "czech": "Švédsko",
+              "example": ""
+            },
+            {
+              "german": "das Schwedisch",
+              "plural": "",
+              "czech": "švédština, švédsky",
+              "example": ""
+            },
+            {
+              "german": "sehr",
+              "plural": "",
+              "czech": "velmi",
+              "example": ""
+            },
+            {
+              "german": "nicht sehr gut",
+              "plural": "",
+              "czech": "ne moc dobře",
+              "example": ""
+            },
+            {
+              "german": "sehr gut",
+              "plural": "",
+              "czech": "velmi dobře",
+              "example": ""
+            },
+            {
+              "german": "studieren",
+              "plural": "er studiert",
+              "czech": "studovat",
+              "example": ""
             }
           ]
         },
