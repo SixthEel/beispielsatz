@@ -575,170 +575,196 @@ class SnakeGameLogic {
    ========================================= */
 class FlashcardsGameLogic {
     constructor(words, container, frontEl, backEl, revealBtn, nextBtn, prevBtn, isReverse) {
-        this.words = words; this.container = container; this.frontEl = frontEl; this.backEl = backEl; this.revealBtn = revealBtn; this.nextBtn = nextBtn; this.prevBtn = prevBtn; this.currentIndex = 0; this.isFlipped = false; this.isReverse = isReverse;
+        // ZAMÍCHÁNÍ SLOVÍČEK NA ZAČÁTKU
+        this.words = [...words].sort(() => Math.random() - 0.5); 
+        this.container = container; this.frontEl = frontEl; this.backEl = backEl; this.revealBtn = revealBtn; this.nextBtn = nextBtn; this.prevBtn = prevBtn; this.currentIndex = 0; this.isFlipped = false; this.isReverse = isReverse;
         this._flipHandler = () => this.flip(); this._nextHandler = () => this.next(); this._prevHandler = () => this.prev();
         revealBtn.addEventListener('click', this._flipHandler); nextBtn.addEventListener('click', this._nextHandler); prevBtn.addEventListener('click', this._prevHandler);
-        this.speaker = document.createElement('button'); this.speaker.innerHTML = '🔊'; this.speaker.className = 'speaker-btn'; this.speaker.addEventListener('click', (e) => { e.stopPropagation(); const word = this.words[this.currentIndex]; speakGerman(word.german); });
+        this.speaker = document.createElement('button'); this.speaker.innerHTML = '🔊'; this.speaker.className = 'speaker-btn'; 
+        this.speaker.addEventListener('click', (e) => { e.stopPropagation(); this.speakCurrent(); });
         this.updateCard();
     }
-    updateCard() { if (!this.words || this.words.length === 0) return; const word = this.words[this.currentIndex]; this.isFlipped = false; this.container.querySelector('.flashcard-inner').style.transform = 'rotateY(0deg)'; setTimeout(() => { this.speaker.remove(); if (this.isReverse) { this.frontEl.textContent = word.german; this.frontEl.appendChild(this.speaker); this.backEl.textContent = word.czech; } else { this.frontEl.textContent = word.czech; this.backEl.textContent = word.german; this.backEl.appendChild(this.speaker); } }, 200); }
-    flip() { this.isFlipped = !this.isFlipped; this.container.querySelector('.flashcard-inner').style.transform = this.isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'; const word = this.words[this.currentIndex]; if ((this.isReverse && !this.isFlipped) || (!this.isReverse && this.isFlipped)) { speakGerman(word.german); } }
+    speakCurrent() {
+        const word = this.words[this.currentIndex];
+        if (!word) return;
+        let textToSpeak = word.german;
+        let pl = word.plural ? word.plural.trim() : '';
+        if (pl && pl !== '-' && pl.indexOf('(') === -1 && pl.indexOf('/') === -1) {
+            let pluralWord = pl;
+            let cleanBase = word.german.replace(/^(der|die|das)\s+/i, '');
+            if (pl.startsWith('-')) pluralWord = cleanBase + pl.substring(1);
+            textToSpeak += ". die " + pluralWord;
+        }
+        speakGerman(textToSpeak);
+    }
+    updateCard() {
+        if (!this.words || this.words.length === 0) return;
+        const word = this.words[this.currentIndex];
+        this.isFlipped = false;
+        this.container.querySelector('.flashcard-inner').style.transform = 'rotateY(0deg)';
+        setTimeout(() => {
+            this.speaker.remove();
+            let pl = '';
+            if (word.plural && word.plural.trim() !== '' && word.plural !== '-') pl = `<div style="font-size: 0.55em; color: #fbbf24; margin-top: 5px; font-weight: 600; letter-spacing: 1px;">(Pl: ${word.plural})</div>`;
+            let textWrapper = `<div style="display:flex; flex-direction:column; align-items:center;"><span>${word.german}</span>${pl}</div>`;
+            if (this.isReverse) { this.frontEl.innerHTML = textWrapper; this.frontEl.appendChild(this.speaker); this.backEl.innerHTML = word.czech; } 
+            else { this.frontEl.innerHTML = word.czech; this.backEl.innerHTML = textWrapper; this.backEl.appendChild(this.speaker); }
+        }, 200);
+    }
+    flip() { this.isFlipped = !this.isFlipped; this.container.querySelector('.flashcard-inner').style.transform = this.isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'; if ((this.isReverse && !this.isFlipped) || (!this.isReverse && this.isFlipped)) { this.speakCurrent(); } }
     next() { if (!this.words || this.words.length === 0) return; this.currentIndex = (this.currentIndex + 1) % this.words.length; this.updateCard(); }
     prev() { if (!this.words || this.words.length === 0) return; this.currentIndex = (this.currentIndex - 1 + this.words.length) % this.words.length; this.updateCard(); }
     destroy() { if(this.revealBtn) this.revealBtn.removeEventListener('click', this._flipHandler); if(this.nextBtn) this.nextBtn.removeEventListener('click', this._nextHandler); if(this.prevBtn) this.prevBtn.removeEventListener('click', this._prevHandler); }
 }
-
 /* =========================================
    3. QUIZ LOGIC (PLURAL MIX)
    ========================================= */
 class QuizGameLogic {
     constructor(words, container, questionEl, optionsEl, feedbackEl, nextBtn, isReverse, pluralMode) {
-        this.words = words;
-        this.container = container;
-        this.questionEl = questionEl;
-        this.optionsEl = optionsEl;
-        this.feedbackEl = feedbackEl;
-        this.score = 0;
-        this.isReverse = isReverse;
-        this.pluralMode = pluralMode || false;
-
-        this.pluralWords = this.words.filter(function(w) {
-            return w.plural && w.plural.trim() !== '' && w.plural !== '-'
-                && w.plural.indexOf('(') === -1;
-        });
-
+        this.words = words; this.container = container; this.questionEl = questionEl; this.optionsEl = optionsEl; this.feedbackEl = feedbackEl; this.score = 0; this.isReverse = isReverse; this.pluralMode = pluralMode || false;
+        this.pluralWords = this.words.filter(w => w.plural && w.plural.trim() !== '' && w.plural !== '-' && w.plural.indexOf('(') === -1);
+        
+        // VÁHOVÝ SYSTÉM
+        this.weights = this.words.map(w => ({ word: w, weight: 10 }));
+        this.pluralWeights = this.pluralWords.map(w => ({ word: w, weight: 10 }));
+        
         this.nextQuestion();
+        
     }
+    
+    // Získá slovo na základě váhy (čím větší váha, tím vyšší šance)
+    getWeightedRandom(weightedArray) {
+        let total = weightedArray.reduce((sum, item) => sum + item.weight, 0);
+        let random = Math.random() * total;
+        for (let item of weightedArray) {
+            if (random < item.weight) return item.word;
+            random -= item.weight;
+        }
+        return weightedArray[0].word;
+    }
+
+    // Upraví váhu podle toho, zda odpověděl správně
+    updateWeight(weightedArray, targetWord, isCorrect) {
+        let item = weightedArray.find(i => i.word === targetWord);
+        
+        if (item) {
+            // 1. Změna váhy podle odpovědi
+            if (isCorrect) {
+                item.weight = item.weight / 2; // Snížíme váhu na polovinu
+            } else {
+                item.weight = item.weight * 2 + 50; // Tvrdá penalizace (zdvojnásobíme a přidáme)
+            }
+        }
+        
+        // 2. NORMALIZACE: Přepočet všech vah tak, aby součet byl vždy přesně 1000
+        let currentSum = weightedArray.reduce((acc, val) => acc + val.weight, 0);
+        
+        if (currentSum > 0) {
+            let factor = 1000 / currentSum; // Zjistíme, jakým číslem musíme násobit, abychom dostali 1000
+            
+            weightedArray.forEach(i => {
+                i.weight = i.weight * factor; // Aplikujeme normu
+                
+                // Pojistka: Váha nesmí klesnout pod 1, aby šance nikdy nebyla absolutní nula (0 %)
+                if (i.weight < 1) i.weight = 1; 
+            });
+        }
+    }
+    
 
     clean(text) { return text.split(',')[0].replace(/\(.*\)/g, '').trim(); }
-
     buildPlural(word) {
-        var pl = word.plural.trim();
-        if (!pl || pl === '-' || pl.indexOf('(') !== -1) return null;
-        if (pl.startsWith('-')) {
-            return word.german.replace(/^(der|die|das)\s+/i, '') + pl.substring(1);
-        }
+        var base = word.german; var pl = word.plural.trim();
+        if (!pl || pl === '-') return null; if (pl.indexOf('(') !== -1) return null;
+        if (pl.startsWith('-')) { var clean = base.replace(/^(der|die|das)\s+/i, ''); return clean + pl.substring(1); }
         return pl;
     }
-
     nextQuestion() {
-        if (!this.words || this.words.length < 4) {
-            this.questionEl.textContent = "Mindestens 4 W\u00f6rter n\u00f6tig!";
-            return;
-        }
-        this.feedbackEl.textContent = '';
-        this.optionsEl.innerHTML = '';
-
-        // Když plural mode ON: 40% šance na plural otázku
-        if (this.pluralMode && this.pluralWords.length >= 4 && Math.random() < 0.4) {
-            this.askPlural();
-        } else {
-            this.askNormal();
-        }
+        if (!this.words || this.words.length < 4) { this.questionEl.textContent = "Mindestens 4 W\u00f6rter n\u00f6tig!"; return; }
+        this.feedbackEl.textContent = ''; this.optionsEl.innerHTML = '';
+        if (this.pluralMode && this.pluralWords.length >= 4) this.askPlural();
+        else this.askNormal();
     }
-
     askNormal() {
         this.currentType = 'normal';
-        var target = this.words[Math.floor(Math.random() * this.words.length)];
-        this.currentAnswer = target;
+        this.currentAnswer = this.getWeightedRandom(this.weights); // CHYTRÝ VÝBĚR
 
-        if (this.isReverse) {
-            this.questionEl.textContent = target.german;
-            speakGerman(target.german);
-        } else {
-            this.questionEl.textContent = this.clean(target.czech);
-        }
+        if (this.isReverse) { this.questionEl.textContent = this.currentAnswer.german; speakGerman(this.currentAnswer.german); } 
+        else { this.questionEl.textContent = this.clean(this.currentAnswer.czech); }
 
-        var options = [target];
+        var options = [this.currentAnswer];
         while (options.length < 4) {
             var w = this.words[Math.floor(Math.random() * this.words.length)];
             if (options.indexOf(w) === -1) options.push(w);
         }
-        options.sort(function() { return Math.random() - 0.5; });
+        options.sort(() => Math.random() - 0.5);
 
         var self = this;
-        options.forEach(function(opt) {
-            var btn = document.createElement('button');
-            btn.className = 'game-btn secondary quiz-option-btn';
+        options.forEach(opt => {
+            var btn = document.createElement('button'); btn.className = 'game-btn secondary quiz-option-btn';
             btn.textContent = self.isReverse ? self.clean(opt.czech) : opt.german;
-            btn.addEventListener('click', function() { self.checkNormal(opt, btn); });
+            btn.addEventListener('click', () => self.checkNormal(opt, btn));
             self.optionsEl.appendChild(btn);
         });
     }
-
     askPlural() {
         this.currentType = 'plural';
-        var target = this.pluralWords[Math.floor(Math.random() * this.pluralWords.length)];
-        this.currentPluralWord = target;
-        var correctPlural = this.buildPlural(target);
+        this.currentPluralWord = this.getWeightedRandom(this.pluralWeights); // CHYTRÝ VÝBĚR
+        var correctPlural = this.buildPlural(this.currentPluralWord);
         if (!correctPlural) { this.askNormal(); return; }
         this.correctPluralText = correctPlural;
 
-        var baseWord = target.german.replace(/^(der|die|das)\s+/i, '');
-        this.questionEl.innerHTML = '<span style="color:#fbbf24;font-size:0.75em;">\u2605 PLURAL</span><br><span style="color:#b2bec3;font-size:0.85em;">Plural von:</span><br>' + baseWord;
+        var baseWord = this.currentPluralWord.german.replace(/^(der|die|das)\s+/i, '');
+        this.questionEl.innerHTML = '<span style="color:#b2bec3;font-size:0.85em;">Plural von:</span><br>' + baseWord;
         speakGerman(baseWord);
 
         var options = [correctPlural];
         var safety = 0;
         while (options.length < 4 && safety < 50) {
-            safety++;
-            var rw = this.pluralWords[Math.floor(Math.random() * this.pluralWords.length)];
-            var rp = this.buildPlural(rw);
+            safety++; var rw = this.pluralWords[Math.floor(Math.random() * this.pluralWords.length)]; var rp = this.buildPlural(rw);
             if (rp && options.indexOf(rp) === -1) options.push(rp);
         }
         while (options.length < 4) {
-            var rw2 = this.words[Math.floor(Math.random() * this.words.length)];
-            var fb = rw2.german.replace(/^(der|die|das)\s+/i, '') + 'en';
+            var rw2 = this.words[Math.floor(Math.random() * this.words.length)]; var fb = rw2.german.replace(/^(der|die|das)\s+/i, '') + 'e';
             if (options.indexOf(fb) === -1) options.push(fb);
         }
-        options.sort(function() { return Math.random() - 0.5; });
+        options.sort(() => Math.random() - 0.5);
 
         var self = this;
-        options.forEach(function(optText) {
-            var btn = document.createElement('button');
-            btn.className = 'game-btn secondary quiz-option-btn';
-            btn.textContent = optText;
-            btn.addEventListener('click', function() { self.checkPlural(optText, btn); });
+        options.forEach(optText => {
+            var btn = document.createElement('button'); btn.className = 'game-btn secondary quiz-option-btn'; btn.textContent = optText;
+            btn.addEventListener('click', () => self.checkPlural(optText, btn));
             self.optionsEl.appendChild(btn);
         });
     }
-
     checkNormal(selected, btn) {
-        var buttons = this.optionsEl.querySelectorAll('button');
-        for (var i = 0; i < buttons.length; i++) buttons[i].disabled = true;
+        var buttons = this.optionsEl.querySelectorAll('button'); buttons.forEach(b => b.disabled = true);
         if (selected === this.currentAnswer) {
-            btn.style.backgroundColor = '#10b981'; btn.style.borderColor = '#10b981';
-            this.score++;
-            this.feedbackEl.textContent = 'Richtig!'; this.feedbackEl.style.color = '#10b981';
+            btn.style.backgroundColor = '#10b981'; btn.style.borderColor = '#10b981'; this.score++; this.feedbackEl.textContent = 'Richtig!'; this.feedbackEl.style.color = '#10b981';
+            this.updateWeight(this.weights, this.currentAnswer, true); // Znal = menší šance
         } else {
             btn.style.backgroundColor = '#ef4444'; btn.style.borderColor = '#ef4444';
             var ct = this.isReverse ? this.clean(this.currentAnswer.czech) : this.currentAnswer.german;
             this.feedbackEl.textContent = 'Falsch! Richtig: ' + ct; this.feedbackEl.style.color = '#ef4444';
+            this.updateWeight(this.weights, this.currentAnswer, false); // NEZNAL = VĚTŠÍ ŠANCE
         }
         speakGerman(this.currentAnswer.german);
-        var self = this;
-        setTimeout(function() { self.nextQuestion(); }, 1500);
+        setTimeout(() => this.nextQuestion(), 1500);
     }
-
     checkPlural(selectedText, btn) {
-        var buttons = this.optionsEl.querySelectorAll('button');
-        for (var i = 0; i < buttons.length; i++) buttons[i].disabled = true;
+        var buttons = this.optionsEl.querySelectorAll('button'); buttons.forEach(b => b.disabled = true);
         if (selectedText === this.correctPluralText) {
-            btn.style.backgroundColor = '#10b981'; btn.style.borderColor = '#10b981';
-            this.score++;
-            this.feedbackEl.textContent = 'Richtig!'; this.feedbackEl.style.color = '#10b981';
+            btn.style.backgroundColor = '#10b981'; btn.style.borderColor = '#10b981'; this.score++; this.feedbackEl.textContent = 'Richtig!'; this.feedbackEl.style.color = '#10b981';
+            this.updateWeight(this.pluralWeights, this.currentPluralWord, true);
         } else {
-            btn.style.backgroundColor = '#ef4444'; btn.style.borderColor = '#ef4444';
-            this.feedbackEl.textContent = 'Falsch! Richtig: ' + this.correctPluralText; this.feedbackEl.style.color = '#ef4444';
+            btn.style.backgroundColor = '#ef4444'; btn.style.borderColor = '#ef4444'; this.feedbackEl.textContent = 'Falsch! Richtig: ' + this.correctPluralText; this.feedbackEl.style.color = '#ef4444';
+            this.updateWeight(this.pluralWeights, this.currentPluralWord, false);
         }
         speakGerman(this.correctPluralText);
-        var self = this;
-        setTimeout(function() { self.nextQuestion(); }, 1500);
+        setTimeout(() => this.nextQuestion(), 1500);
     }
-
     destroy() {}
 }
-
 /* =========================================
    4. MEMORY LOGIC (PLURAL MIX + MODE)
    ========================================= */
@@ -982,100 +1008,103 @@ class MemoryGameLogic {
    ========================================= */
 class TypingGameLogic {
     constructor(words, container, promptEl, inputEl, checkBtn, hintBtn, feedbackEl, nextBtn, isReverse, pluralMode) {
-        this.words = words;
-        this.container = container;
-        this.promptEl = promptEl;
-        this.inputEl = inputEl;
-        this.feedbackEl = feedbackEl;
-        this.checkBtn = checkBtn;
-        this.hintBtn = hintBtn;
-        this.isReverse = isReverse;
-        this.pluralMode = pluralMode || false;
+        this.words = words; this.container = container; this.promptEl = promptEl; this.inputEl = inputEl; this.feedbackEl = feedbackEl; this.checkBtn = checkBtn; this.hintBtn = hintBtn; this.isReverse = isReverse; this.pluralMode = pluralMode || false;
+        this.pluralWords = this.words.filter(w => w.plural && w.plural.trim() !== '' && w.plural !== '-' && w.plural.indexOf('(') === -1);
+        
+        // VÁHOVÝ SYSTÉM
+        this.weights = this.words.map(w => ({ word: w, weight: 10 }));
+        this.pluralWeights = this.pluralWords.map(w => ({ word: w, weight: 10 }));
 
-        this.pluralWords = this.words.filter(function(w) {
-            return w.plural && w.plural.trim() !== '' && w.plural !== '-'
-                && w.plural.indexOf('(') === -1;
-        });
-
-        var self = this;
-        this.checkBtn.addEventListener('click', function() { self.check(); });
-        this.hintBtn.addEventListener('click', function() { self.showHint(); });
-        this.inputEl.addEventListener('keydown', function(e) { if (e.key === 'Enter') self.check(); });
+        this.checkBtn.addEventListener('click', () => this.check());
+        this.hintBtn.addEventListener('click', () => this.showHint());
+        this.inputEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') this.check(); });
 
         this.nextWord();
+        
     }
-
-    clean(text) { return text.split(',')[0].replace(/\(.*\)/g, '').trim(); }
-
-    buildPlural(word) {
-        var pl = word.plural.trim();
-        if (!pl || pl === '-' || pl.indexOf('(') !== -1) return null;
-        if (pl.startsWith('-')) {
-            return word.german.replace(/^(der|die|das)\s+/i, '') + pl.substring(1);
+    getWeightedRandom(weightedArray) {
+        let total = weightedArray.reduce((sum, item) => sum + item.weight, 0); let random = Math.random() * total;
+        for (let item of weightedArray) { if (random < item.weight) return item.word; random -= item.weight; }
+        return weightedArray[0].word;
+    }
+    updateWeight(weightedArray, targetWord, isCorrect) {
+        let item = weightedArray.find(i => i.word === targetWord);
+        
+        if (item) {
+            // 1. Změna váhy podle odpovědi
+            if (isCorrect) {
+                item.weight = item.weight / 2; // Snížíme váhu na polovinu
+            } else {
+                item.weight = item.weight * 2 + 50; // Tvrdá penalizace (zdvojnásobíme a přidáme)
+            }
         }
+        
+        // 2. NORMALIZACE: Přepočet všech vah tak, aby součet byl vždy přesně 1000
+        let currentSum = weightedArray.reduce((acc, val) => acc + val.weight, 0);
+        
+        if (currentSum > 0) {
+            let factor = 1000 / currentSum; // Zjistíme, jakým číslem musíme násobit, abychom dostali 1000
+            
+            weightedArray.forEach(i => {
+                i.weight = i.weight * factor; // Aplikujeme normu
+                
+                // Pojistka: Váha nesmí klesnout pod 1, aby šance nikdy nebyla absolutní nula (0 %)
+                if (i.weight < 1) i.weight = 1; 
+            });
+        }
+    }
+    
+    clean(text) { return text.split(',')[0].replace(/\(.*\)/g, '').trim(); }
+    buildPlural(word) {
+        var pl = word.plural.trim(); if (!pl || pl === '-' || pl.indexOf('(') !== -1) return null;
+        if (pl.startsWith('-')) { var clean = word.german.replace(/^(der|die|das)\s+/i, ''); return clean + pl.substring(1); }
         return pl;
     }
-
     nextWord() {
         if (!this.words || this.words.length === 0) return;
-        this.inputEl.value = '';
-        this.feedbackEl.textContent = '';
-
+        this.inputEl.value = ''; this.feedbackEl.textContent = '';
         var title = this.container.querySelector('h3');
 
-        // Plural mode: 35% šance na plural otázku
-        if (this.pluralMode && this.pluralWords.length >= 3 && Math.random() < 0.35) {
+        if (this.pluralMode && this.pluralWords.length >= 3) {
             this.currentType = 'plural';
-            this.target = this.pluralWords[Math.floor(Math.random() * this.pluralWords.length)];
+            this.target = this.getWeightedRandom(this.pluralWeights); // CHYTRÝ VÝBĚR
             this.correctAnswer = this.buildPlural(this.target);
             if (!this.correctAnswer) { this.currentType = 'normal'; this.askNormal(title); this.inputEl.focus(); return; }
             var baseWord = this.target.german.replace(/^(der|die|das)\s+/i, '');
-            if (title) title.innerHTML = '<span style="color:#fbbf24;">\u2605</span> Schreib den Plural:';
-            this.promptEl.innerHTML = baseWord + ' <span style="color:#fbbf24;font-size:0.8em;">(Plural?)</span>';
+            if (title) title.textContent = 'Schreib den Plural:';
+            this.promptEl.innerHTML = baseWord + ' <span style="color:#b2bec3;font-size:0.8em;">(Plural?)</span>';
             speakGerman(baseWord);
         } else {
             this.currentType = 'normal';
             this.askNormal(title);
         }
-
         this.inputEl.focus();
     }
-
     askNormal(title) {
-        this.target = this.words[Math.floor(Math.random() * this.words.length)];
+        this.target = this.getWeightedRandom(this.weights); // CHYTRÝ VÝBĚR
         if (this.isReverse) {
-            if (title) title.textContent = '\u00dcbersetze ins Tschechische:';
-            this.promptEl.textContent = this.target.german;
-            this.correctAnswer = this.clean(this.target.czech);
-            speakGerman(this.target.german);
+            if (title) title.textContent = '\u00dcbersetze ins Tschechische:'; this.promptEl.textContent = this.target.german; this.correctAnswer = this.clean(this.target.czech); speakGerman(this.target.german);
         } else {
-            if (title) title.textContent = '\u00dcbersetze ins Deutsche:';
-            this.promptEl.textContent = this.clean(this.target.czech);
-            this.correctAnswer = this.target.german;
+            if (title) title.textContent = '\u00dcbersetze ins Deutsche:'; this.promptEl.textContent = this.clean(this.target.czech); this.correctAnswer = this.target.german;
         }
     }
-
     check() {
         var input = this.inputEl.value.trim().toLowerCase();
         var correct = this.correctAnswer.toLowerCase();
         if (input === correct) {
             this.feedbackEl.textContent = 'Richtig!'; this.feedbackEl.style.color = '#10b981';
+            if (this.currentType === 'plural') this.updateWeight(this.pluralWeights, this.target, true); else this.updateWeight(this.weights, this.target, true);
             speakGerman(this.currentType === 'plural' ? this.correctAnswer : this.target.german);
-            var self = this;
-            setTimeout(function() { self.nextWord(); }, 1000);
+            setTimeout(() => this.nextWord(), 1000);
         } else {
             this.feedbackEl.textContent = 'Falsch. Richtig: ' + this.correctAnswer; this.feedbackEl.style.color = '#ef4444';
+            if (this.currentType === 'plural') this.updateWeight(this.pluralWeights, this.target, false); else this.updateWeight(this.weights, this.target, false);
             speakGerman(this.currentType === 'plural' ? this.correctAnswer : this.target.german);
         }
     }
-
-    showHint() {
-        if (this.correctAnswer) { this.inputEl.value = this.correctAnswer.substring(0, 3); this.inputEl.focus(); }
-    }
-
+    showHint() { if (this.correctAnswer) { this.inputEl.value = this.correctAnswer.substring(0, 3); this.inputEl.focus(); } }
     destroy() {}
 }
-
 /* =========================================
    6. SENTENCE BUILDER LOGIC
    ========================================= */
@@ -1099,6 +1128,7 @@ class GameManager {
         this.restartBtn = document.querySelector('.restart-btn');
         this.pluralBtn = document.getElementById('pluralToggleBtn');
         this.words = []; this.sentences = []; this.activeGame = null; this.currentGameId = null;
+        
         this.options = { reverse: false, plural: false };
         this.setupListeners();
     }
@@ -1151,6 +1181,7 @@ class GameManager {
         if (this.activeGame && typeof this.activeGame.destroy === 'function') this.activeGame.destroy();
         this.activeGame = null; window.speechSynthesis.cancel();
         this.gameViewport.innerHTML = ''; this.activeContainer.classList.add('hidden'); this.currentGameId = null;
+        
     }
 
     restartActiveGame() {
@@ -1174,3 +1205,81 @@ class GameManager {
     _createSentenceUI() { var c = document.createElement('div'); c.className = 'sentence-container'; c.innerHTML = '<div id="sent-prompt" class="sentence-prompt"></div><div id="sent-area" class="sentence-area"></div><div id="sent-bank" class="word-bank"></div><div style="display:flex;justify-content:center;"><button class="game-btn" id="sent-check">Pr\u00fcfen</button></div><div id="sent-feedback" style="text-align:center;font-weight:bold;font-size:1.2rem;min-height:30px;"></div>'; return { container: c, promptEl: c.querySelector('#sent-prompt'), areaEl: c.querySelector('#sent-area'), bankEl: c.querySelector('#sent-bank'), checkBtn: c.querySelector('#sent-check'), feedbackEl: c.querySelector('#sent-feedback') }; }
 }
 window.GameManager = new GameManager();
+
+
+
+function updateDebugWeights(weights, pluralWeights) {
+    let panel = document.getElementById('weight-debug-panel');
+    
+    // Pokud je přepínač vypnutý, panel schováme a dál nepočítáme
+    if (!window.srsEnabled) {
+        if (panel) panel.style.display = 'none';
+        return;
+    }
+
+    if (!panel) {
+        panel = document.createElement('div');
+        panel.id = 'weight-debug-panel';
+        document.body.appendChild(panel);
+    }
+    
+    let html = '<h3>Wortgewichte (Chancen)</h3><ul>';
+    let allWeights = [];
+    
+    if (weights) allWeights = allWeights.concat(weights.map(w => ({ text: w.word.german, weight: w.weight })));
+    if (pluralWeights) allWeights = allWeights.concat(pluralWeights.map(w => ({ text: w.word.german + ' (Pl)', weight: w.weight })));
+    
+    // Výpočet SUMY všech vah (Tvůj jmenovatel pro výpočet procent!)
+    let totalWeight = allWeights.reduce((sum, item) => sum + item.weight, 0);
+    
+    // Seřadit od největší šance
+    allWeights.sort((a, b) => b.weight - a.weight);
+    
+    allWeights.forEach(item => {
+        let color = item.weight > 10 ? '#ef4444' : (item.weight < 10 ? '#10b981' : '#b2bec3');
+        // TVOJE ROVNICE V AKCI: 100 * (váha / suma)
+        let percent = totalWeight > 0 ? (100 * (item.weight / totalWeight)).toFixed(1) : 0;
+        
+        html += `<li><span title="${item.text}">${item.text}</span> <strong style="color:${color}">${percent} %</strong></li>`;
+    });
+    
+    html += '</ul>';
+    panel.innerHTML = html;
+    panel.style.display = 'block';
+}
+
+function hideDebugWeights() {
+    let panel = document.getElementById('weight-debug-panel');
+    if (panel) panel.style.display = 'none';
+}
+function updateDebugWeights(weights, pluralWeights) {
+    let panel = document.getElementById('weight-debug-panel');
+    if (!panel) {
+        panel = document.createElement('div');
+        panel.id = 'weight-debug-panel';
+        document.body.appendChild(panel);
+    }
+    
+    let html = '<h3>Wortgewichte</h3><ul>';
+    let allWeights = [];
+    
+    if (weights) allWeights = allWeights.concat(weights.map(w => ({ text: w.word.german, weight: w.weight })));
+    if (pluralWeights) allWeights = allWeights.concat(pluralWeights.map(w => ({ text: w.word.german + ' (Pl)', weight: w.weight })));
+    
+    // Seřadit od největší váhy (nejproblémovější slova nahoře)
+    allWeights.sort((a, b) => b.weight - a.weight);
+    
+    allWeights.forEach(item => {
+        let color = item.weight > 10 ? '#ef4444' : (item.weight < 10 ? '#10b981' : '#b2bec3');
+        html += `<li><span title="${item.text}">${item.text}</span> <strong style="color:${color}">${item.weight.toFixed(1)}</strong></li>`;
+    });
+    
+    html += '</ul>';
+    panel.innerHTML = html;
+    panel.style.display = 'block';
+}
+
+function hideDebugWeights() {
+    let panel = document.getElementById('weight-debug-panel');
+    if (panel) panel.style.display = 'none';
+}
